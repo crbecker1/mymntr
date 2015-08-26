@@ -1,19 +1,9 @@
 class Views::LoggedOut::Index < Views::Base
   def content
     wide_row(:'background-cover') {
-      div(class: %[clear-panel text-center]) {
-        h1 {
-          span "Slogan", class: :'text-primary'
-          br
-          span "Tagline", class: :'text-alert'
-        }
-        h4 "Solution X for Problem Y"
 
-        p "Why this is right for you. " * 8
-
-        render partial: "take_action_button"
-      }
     }
+
     wide_row(:'palate-white-on-green') {
       blockquote(class: :'blockquote-grande') {
         text "\"You have brains in your head. You have feet in your shoes. You can steer yourself in any direction you choose. You're on your own, and you know what you know. And you are the guy who'll decide where to go.\""
