@@ -89,8 +89,8 @@ $include-html-global-classes: $include-html-classes;
 
 
 // We use these to define default font stacks
-$font-family-sans-serif: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: "Slabo 27px", Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: $font-family-sans-serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -1383,7 +1383,7 @@ $topbar-height: rem-calc(70);
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+ $topbar-title-font-size: rem-calc(18);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
@@ -1395,12 +1395,12 @@ $topbar-height: rem-calc(70);
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
+ $topbar-link-color: $info-color;
+ //$topbar-link-color-hover: $white;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+ $topbar-link-font-size: $topbar-title-font-size;
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: $charcoal;
@@ -1518,7 +1518,6 @@ i { margin: 5px }
 %chunko-text {
   text-transform: uppercase;
   font-family: $font-family-serif;
-  letter-spacing: 0.3em;
 }
 
 .palate-white-on-green {

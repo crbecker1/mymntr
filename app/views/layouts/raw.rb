@@ -11,7 +11,7 @@ class Views::Layouts::Raw < Views::Base
         title(content_for?(:title) ? yield(:title) : Rails.application.config.project_name)
 
         stylesheet_link_tag 'application', media: 'all'
-        stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato|Slabo+27px'
+        stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:400,300,500,700'
         javascript_include_tag 'vendor/modernizr'
         javascript_include_tag 'application'
         if Airbrake.configuration.project_id && Airbrake.configuration.api_key
@@ -44,7 +44,7 @@ class Views::Layouts::Raw < Views::Base
 
             section(class: "top-bar-section") {
               ul(class: "right") {
-                li(class: "active") {
+                li {
                   a(href: about_path) {
                     text "ABOUT"
                   }
