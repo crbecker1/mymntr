@@ -14,6 +14,7 @@ class Views::Layouts::Raw < Views::Base
         stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:400,300,500,700'
         javascript_include_tag 'vendor/modernizr'
         javascript_include_tag 'application'
+        javascript_include_tag 'feedbacklite'
         if Airbrake.configuration.project_id && Airbrake.configuration.api_key
           javascript_include_tag "airbrake-shim",
             "data-airbrake-project-id" => Airbrake.configuration.project_id,
