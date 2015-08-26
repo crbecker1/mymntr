@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'airbrake'
+gem 'cocoon'
 gem 'coffee-rails'
 gem 'compass-rails'
 gem 'fortitude'
