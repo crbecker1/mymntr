@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'logged_out#index'
 
-  get 'take_action' => "logged_out#take_action"
+  get 'about' => "logged_out#about"
+  get 'team' => "logged_out#team"
+  get 'contact' => "logged_out#contact"
 
   resources :accounts, only: [:new, :create, :edit, :update]
   resource :session, only: [:new, :create, :destroy]

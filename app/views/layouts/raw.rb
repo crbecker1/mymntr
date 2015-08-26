@@ -16,9 +16,9 @@ class Views::Layouts::Raw < Views::Base
         javascript_include_tag 'application'
         if Airbrake.configuration.project_id && Airbrake.configuration.api_key
           javascript_include_tag "airbrake-shim",
-                                 "data-airbrake-project-id" => Airbrake.configuration.project_id,
-                                 "data-airbrake-project-key" => Airbrake.configuration.api_key,
-                                 "data-airbrake-environment-name" => Airbrake.configuration.environment_name
+            "data-airbrake-project-id" => Airbrake.configuration.project_id,
+            "data-airbrake-project-key" => Airbrake.configuration.api_key,
+            "data-airbrake-environment-name" => Airbrake.configuration.environment_name
         end
         csrf_meta_tags
       }
@@ -30,7 +30,7 @@ class Views::Layouts::Raw < Views::Base
               li(:class => "name") {
                 h1 {
                   a(:href => "/") {
-                    image_tag "http://placekitten.com/g/90/57", class: "logo", alt: "#{Rails.application.config.project_name} Logo"
+                    text "MYMNTR"
                   }
                 }
               }
@@ -45,8 +45,23 @@ class Views::Layouts::Raw < Views::Base
             section(class: "top-bar-section") {
               ul(class: "right") {
                 li(class: "active") {
-                  a(href: take_action_path) {
-                    text "Take Action"
+                  a(href: about_path) {
+                    text "ABOUT"
+                  }
+                }
+                li {
+                  a(href: team_path) {
+                    text "OUR TEAM"
+                  }
+                }
+                li {
+                  a(href: contact_path) {
+                    text "CONTACT"
+                  }
+                }
+                li {
+                  a(href: new_session_path) {
+                    text "SIGN IN"
                   }
                 }
               }
