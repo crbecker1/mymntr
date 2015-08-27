@@ -21,6 +21,7 @@ gem 'rails_12factor', group: :production
 gem 'responders'
 gem 'sass-rails'
 gem 'sdoc',          group: :doc
+gem 'social-share-button'
 gem 'sorcery'
 gem 'uglifier'
 

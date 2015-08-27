@@ -24,7 +24,6 @@ class Quiz < ActiveRecord::Base
     end
 
     if question_2 == false
-      puts "hi here"
       result[:cant_touch] +=1
       result[:om_baby] +=1
       result[:badass] +=1
