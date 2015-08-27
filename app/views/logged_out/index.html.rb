@@ -3,8 +3,13 @@ class Views::LoggedOut::Index < Views::Base
     row(class:'screaming-hero hero-image full-width') {
 
     }
+    row(class:'small-blue-container show-for-small-only') {
+      column('small-9 small-centered text-center'){
+        p "be inspired to know your own mind", class:'heading-style'
+      }
+    }
 
-    row(class:'white-container compact-text') {
+    row(class:'white-container intro-blurb') {
       column('show-for-medium-up medium-3 medium-offset-1') {
         image_tag('phone-asset.png', class: 'image-size-reduction')
       }
@@ -27,15 +32,15 @@ class Views::LoggedOut::Index < Views::Base
     #   p "* Tell us what you think. We want your feedback. Click here to SPEAK YOUR MIND."
     # }
 
-    row(class:'blue-container full-width caption-text') {
+    row(class:'blue-container full-width body-copy') {
         column('small-12 medium-9 medium-centered large-7 large-centered') {
-          p "Hi, you are about to build your own culturally relevant user guide for YOUR brain...", class:'sub-headings'
+          p "Hi, you're invited to build your own culturally relevant user guide for YOUR brain...", class:'body-title'
           ul
-            li "– A new way to find out what’s going on up there in your own mixture of cells"
-            li "– A new way to know how your circuits can amp up your life + work"
-            li "– Oh. It might help you improve your world by changing how you view your world with the brain in mind. "
+            li "– A new way to find out what’s going on up there in your own mixture of cells."
+            li "– A new way to know how your circuits can amp up your life + work."
+            li "– Oh. It might help you improve your world by changing how you view your world with the brain in mind."
           br
-          text "We’re (hot link to ‘about us’) making mymntr with media-makers, change-agents, and neuroscientists -- all for you. We want you to live here, experience it, and tell us what you think. Then, we’re gonna make it a mobile experience, for you. Cool? Cool."
+          p "We’re making mymntr with media-makers, change-agents, and neuroscientists -- all for you!", class: 'body-copy'
         }
     }
 

@@ -1597,9 +1597,9 @@ body {
 .blue-container {
   color: $palate1-primary;
   background-color: $info-color;
-  padding: rem-calc(64) 0;
+  padding: rem-calc(48) 0;
   @media #{$medium-up} {
-    padding: rem-calc(100) 0;
+    padding: rem-calc(80) 0;
   }
 }
 .body-copy {
@@ -1607,6 +1607,12 @@ body {
   font-size: 16px;
   color: #3E3E3F;
   line-height: 24px;
+}
+.body-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #3E3E3F;
+  line-height: 27px;
 }
 .caption-text {
   font-weight: 300;
@@ -1620,18 +1626,26 @@ body {
   color: #3E3E3F;
   line-height: 20px;
 }
-.heading-uppercase {
-  font-weight: 500;
-  font-size: 24px;
-  color: #3E3E3F;
-  line-height: 26px;
-  text-transform: uppercase;
+.heading-style {
+   font-weight: 500;
+   font-size: 24px;
+   color: #3E3E3F;
+   line-height: 26px;
 }
 .hero-image {
   max-width: 100%;
   background-size: cover;
   background-position: center top;
   padding: rem-calc(250) 0;
+}
+.intro-blurb p {
+  font-weight: 300;
+  line-height: 20px;
+  @media #{$medium-up} {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
 }
 .image-size-reduction {
   max-height: rem-calc(320);
@@ -1646,6 +1660,10 @@ body {
 .light-blue-container {
   background: rgba(210,229,236,0.28);
 }
+li {
+  display: inherit;
+  line-height: 24px;
+}
 .sub-headings {
   font-weight: 400;
   font-size: 18px;
@@ -1653,14 +1671,28 @@ body {
   line-height: 24px;
 }
 .screaming-hero {
-  background-image: asset-url('screaming-hero-desktop.jpg');
+  background-image: asset-url('screaming-hero-mobile.jpg');
+  @media #{$medium-only} {
+    background-image: asset-url('screaming-hero-medium.jpg');
+  }
+  @media #{$large-only} {
+    background-image: asset-url('screaming-hero-desktop.jpg');
+  }
+}
+.small-blue-container {
+  color: $palate1-primary;
+  background-color: $info-color;
+  padding-top: rem-calc(16);
 }
 .top-spacer {
   padding: rem-calc(64) 0;
 }
+.uppercase-style {
+  text-transform: uppercase;
+}
 .white-container {
   color: $palate1-primary;
-  padding: rem-calc(32) 0;
+  padding: rem-calc(8) 0;
   @media #{$medium-up} {
     padding: rem-calc(48) 0;
   }
