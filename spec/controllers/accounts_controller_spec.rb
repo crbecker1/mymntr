@@ -18,6 +18,14 @@ describe AccountsController, type: :controller do
       expect(response).to redirect_to my_account_path
     end
 
+    it 'creates a quiz when there is one in the session; resets session' do
+      session[:quiz] = {name: "session_quiz"}
+      post :create, { account: { email: 'bob@example.com', password: 'password' } }
+
+      expect(Account.last.quiz).to eq(Quiz.find_by(name: "session_quiz"))
+      expect(session[:quiz]).to be_nil
+    end
+
     it 'sets last_login_at' do
       post :create, {account: { email: 'bob@example.com', password: 'password' } }
 

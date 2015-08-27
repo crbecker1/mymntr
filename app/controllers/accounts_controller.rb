@@ -14,6 +14,7 @@ class AccountsController < ApplicationController
     authorize @account
     if @account.persisted?
       login_without_credentials(@account)
+      create_quiz_if_needed
       redirect_to my_account_path
     else
       render :new, layout: 'layouts/logged_out'
@@ -45,7 +46,15 @@ class AccountsController < ApplicationController
 
   private
 
-    def account_params
-      params.require(:account).permit(:email, :password)
+  def account_params
+    params.require(:account).permit(:email, :password)
+  end
+
+  def create_quiz_if_needed
+    if session[:quiz].present?
+      @quiz = current_user.create_quiz(session[:quiz])
+      session[:quiz] = nil
+      flash[:notice] = "Here are your results!"
     end
+  end
 end

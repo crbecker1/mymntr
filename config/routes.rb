@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :accounts, only: [:new, :create, :edit, :update]
   resource :session, only: [:new, :create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
-  resources :quizzes, only: [:new]
+  resources :quizzes, only: [:new, :create]
 
   get 'my_account' => 'logged_in#landing'
 
