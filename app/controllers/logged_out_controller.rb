@@ -12,6 +12,7 @@ class LoggedOutController < ApplicationController
   end
 
   def index
+    @count = Quiz.count
   end
 
   def not_found

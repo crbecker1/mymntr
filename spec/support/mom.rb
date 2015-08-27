@@ -6,6 +6,10 @@ class Mom
     Account.new email: email, password: password
   end
 
+  def quiz
+    Quiz.new
+  end
+
   def role(name: 'A Role', key: nil)
     Role.new name: name, key: (key || name)
   end

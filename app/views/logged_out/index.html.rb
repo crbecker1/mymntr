@@ -1,4 +1,6 @@
 class Views::LoggedOut::Index < Views::Base
+  needs :count
+
   def content
     row(class:'screaming-hero hero-image full-width') {
 
@@ -46,10 +48,8 @@ class Views::LoggedOut::Index < Views::Base
 
     row(class:'white-container text-center') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
-        h4 "About Product Z"
-        p "We do this onne thing really well. Squid ennui cray trust fund fixie, forage Odd Future. Godard actually ennui, put a bird on it polaroid four loko meditation whatever swag food truck letterpress. Tilde Vice Tumblr, Helvetica quinoa meggings locavore. Vegan freegan disrupt synth mumblecore banjo slow-carb messenger bag paleo, Wes Anderson Echo Park."
-        p "Click below to sign up for our service. Marfa synth beard Shoreditch mixtape, tousled messenger bag next level cronut. Salvia four dollar toast tofu, you probably haven't heard of them raw denim polaroid pork belly Shoreditch."
         render partial: "take_action_button"
+        p "#{count} people have already!"
       }
     }
     javascript "analytics.track('acquisition/visit')"
