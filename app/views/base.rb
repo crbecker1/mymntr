@@ -12,8 +12,8 @@ module Views
       div(add_classes(args, [:columns, size]), &block)
     end
 
-    def full_row
-      row { column { yield } }
+    def full_row(size=:'small-12', args={})
+      row { column(size) { yield } }
     end
 
     def buttonish(size = :small, *extras)

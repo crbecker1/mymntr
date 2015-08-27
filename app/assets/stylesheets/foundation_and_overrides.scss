@@ -1457,6 +1457,7 @@ $topbar-link-dropdown-padding: ($topbar-height / 3);
 @import 'foundation';
 @import 'foundation-icons';
 
+
 // Helper mixins =======================
 
 @mixin fix-height($direction: left) {
@@ -1465,81 +1466,97 @@ $topbar-link-dropdown-padding: ($topbar-height / 3);
 	$direction: 0;
 	top: $topbar-height;
 }
-
 i { margin: 5px }
 
 // Page-specific styling ===============
 
 .app-container{
-	@include grid-row($behavior: collapse);
+  @include grid-row($behavior: collapse);
 }
-
 .app-nav{
-	@include grid-column($columns: 12);
-	@include padding-leader(.5);
-	background: $primary-color;
-	li a:not(.button){
-		color: white;
-	}
+  @include grid-column($columns: 12);
+  @include padding-leader(.5);
+  background: $primary-color;
+  li a:not(.button){
+      color: white;
+  }
 }
 .app-content{
-	@include grid-column($columns: 12);
-	@include padding-leader(.5);
+  @include grid-column($columns: 12);
+  @include padding-leader(.5);
 }
 .app-content-wide{
-	@include grid-column($columns: 12);
-	@include padding-leader(.5);
+  @include grid-column($columns: 12);
+  @include padding-leader(.5);
 }
-
 .app-aside{
-	@include grid-column($columns: 12);
-	@include padding-leader(.5);
-	background: darken($vapor, 15);
+  @include grid-column($columns: 12);
+  @include padding-leader(.5);
+  background: darken($vapor, 15);
 }
-
-@media #{$medium-up}{
-	.app-container{
-		max-width: none;
-	}
-	.app-nav{
-		@include grid-column($columns: 2);
-	}
-	.app-content{
-		@include grid-column($columns: 6);
-	}
-	.app-content-wide{
-		@include grid-column($columns: 10);
-	}
-	.app-aside{
-		@include grid-column($columns: 4);
-	}
+.alert-box.flash-msg {
+  margin-bottom: 0;
 }
-
-%chunko-text {
-  text-transform: uppercase;
-  font-family: $font-family-serif;
-}
-
-.palate-white-on-green {
-  color: $snow;
-  blockquote, cite {
-    color: $snow;
+.blockquote-grande {
+  @extend %chunko-text;
+  border-left: none;
+  cite {
+    font-style: normal;
   }
-  background-color: $palate1-primary;
 }
- .white-text {
-   color: $snow;
- }
-
+body {
+  background-color: $white;
+}
 .button a {
   @extend %chunko-text;
   color: $snow;
 }
-
 .button.bordered {
   border: solid 2px $snow;
 }
-
+%chunko-text {
+  text-transform: uppercase;
+  font-family: $font-family-serif;
+}
+.clear-panel {
+  @include border-radius(3px);
+  padding: $panel-padding;
+  background-color: rgba($body-bg, .95);
+  h1, h2, h3, h4, .button {
+    @extend %chunko-text;
+    text-align: center;
+    color: $palate1-primary;
+  }
+}
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+.logo {
+  width: rem-calc(90);
+  height: auto;
+  padding: $topbar-height/6 0 $topbar-height/5 0;
+  max-height: $topbar-height;
+}
+@media #{$medium-up}{
+  .app-container{
+    max-width: none;
+  }
+  .app-nav{
+    @include grid-column($columns: 2);
+  }
+  .app-content{
+    @include grid-column($columns: 6);
+  }
+  .app-content-wide{
+    @include grid-column($columns: 10);
+  }
+  .app-aside{
+    @include grid-column($columns: 4);
+  }
+}
 .palate-green-on-white {
   h4 {
     @extend %chunko-text;
@@ -1555,51 +1572,99 @@ i { margin: 5px }
   text-align: right;
   padding-right: 15px;
 }
+.white-text {
+  color: $snow;
+}
 
-.blockquote-grande {
-  @extend %chunko-text;
-  border-left: none;
+// ====================== Smart Styles
 
-  cite {
-    font-style: normal;
+.action-button {
+  background: #5AC9F0;
+  border-radius: 40px;
+}
+.action-button__text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 21px;
+}
+.add-gutter {
+  padding: rem-calc(48) rem-calc(16);
+}
+.bottom-spacer {
+  padding-bottom: rem-calc(64);
+}
+.blue-container {
+  color: $palate1-primary;
+  background-color: $info-color;
+  padding: rem-calc(64) 0;
+  @media #{$medium-up} {
+    padding: rem-calc(100) 0;
   }
 }
-
-.alert-box.flash-msg {
-  margin-bottom: 0;
+.body-copy {
+  font-weight: 300;
+  font-size: 16px;
+  color: #3E3E3F;
+  line-height: 24px;
 }
-
-.logo {
-  width: rem-calc(90);
-  height: auto;
-  padding: $topbar-height/6 0 $topbar-height/5 0;
-  max-height: $topbar-height;
+.caption-text {
+  font-weight: 300;
+  font-size: 16px;
+  color: #3E3E3F;
+  line-height: 20px;
 }
-
-.background-cover {
+.compact-text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #3E3E3F;
+  line-height: 20px;
+}
+.heading-uppercase {
+  font-weight: 500;
+  font-size: 24px;
+  color: #3E3E3F;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+.hero-image {
+  max-width: 100%;
   background-size: cover;
-  background-image: asset-url("screaming-hero-desktop.jpg");
-  height: 500px;
+  background-position: center top;
+  padding: rem-calc(250) 0;
 }
-
-.clear-panel {
-  @include border-radius(3px);
-  padding: $panel-padding;
-  background-color: rgba($body-bg, .95);
-  h1, h2, h3, h4, .button {
-    @extend %chunko-text;
-    text-align: center;
-    color: $palate1-primary;
+.image-size-reduction {
+  max-height: rem-calc(320);
+  padding-top: rem-calc(32);
+}
+.list-items {
+  font-weight: 300;
+  font-size: 16px;
+  color: #3E3E3F;
+  line-height: 22px;
+}
+.light-blue-container {
+  background: rgba(210,229,236,0.28);
+}
+.sub-headings {
+  font-weight: 400;
+  font-size: 18px;
+  color: #286A8C;
+  line-height: 24px;
+}
+.screaming-hero {
+  background-image: asset-url('screaming-hero-desktop.jpg');
+}
+.top-spacer {
+  padding: rem-calc(64) 0;
+}
+.white-container {
+  color: $palate1-primary;
+  padding: rem-calc(32) 0;
+  @media #{$medium-up} {
+    padding: rem-calc(48) 0;
   }
 }
 
-.fullWidth {
-   width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: initial;
-}
 
-body {
-  background-color: $palate1-primary;
-}
+
