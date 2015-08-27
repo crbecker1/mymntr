@@ -58,11 +58,17 @@ ActiveRecord::Schema.define(version: 20141015225533) do
     t.datetime "updated_at"
   end
 
+  create_table "quizzes", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "account_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "key",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 end
