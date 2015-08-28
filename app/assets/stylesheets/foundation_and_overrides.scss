@@ -1637,6 +1637,15 @@ body {
   background-size: cover;
   background-position: center top;
   padding: rem-calc(250) 0;
+  @media #{$medium-up} {
+    padding: rem-calc(180) 0;
+  }
+  @media #{$large-up} {
+    padding: rem-calc(200) 0;
+  }
+  @media #{$xlarge-up} {
+    padding:rem-calc(300) 0;
+  }
 }
 .intro-blurb p {
   font-weight: 300;
@@ -1672,10 +1681,10 @@ li {
 }
 .screaming-hero {
   background-image: asset-url('screaming-hero-mobile.jpg');
-  @media #{$medium-only} {
+  @media #{$medium-up} {
     background-image: asset-url('screaming-hero-medium.jpg');
   }
-  @media #{$large-only} {
+  @media #{$large-up} {
     background-image: asset-url('screaming-hero-desktop.jpg');
   }
 }
