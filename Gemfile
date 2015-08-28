@@ -33,6 +33,7 @@ group(:development, :test) do
 end
 
 group(:development) do
+  gem 'dotenv-rails'
   gem 'html2fortitude'
   gem 'letter_opener'
   gem 'meta_request'
