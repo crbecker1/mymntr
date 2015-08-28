@@ -20,6 +20,7 @@
 .idea
 .vagrant
 .ruby-gemset
+.env
 
 # OS files
 .DS_Store
