@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+  include MailingLists
+
   skip_before_filter :require_login, only: [:new, :create]
 
   def new
@@ -53,6 +55,7 @@ class AccountsController < ApplicationController
   def create_quiz_if_needed
     if session[:quiz].present?
       @quiz = current_user.create_quiz(session[:quiz])
+      subscribe_user_to_mailing_list(@quiz.result, current_user)
       session[:quiz] = nil
       flash[:notice] = "Here are your results!"
     end

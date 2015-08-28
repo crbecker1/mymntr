@@ -1,4 +1,6 @@
 class QuizzesController < ApplicationController
+  include MailingLists
+
   skip_before_filter :require_login, only: [:new, :create]
 
   def new
@@ -12,6 +14,8 @@ class QuizzesController < ApplicationController
       redirect_to new_account_path
     else
       @quiz = current_user.create_quiz(quiz_params)
+      @result = @quiz.result
+      subscribe_user_to_mailing_list(@result, current_user)
       respond_to do |format|
         if @quiz.save
           format.html { redirect_to my_account_path, notice: 'Quiz was successfully

@@ -36,9 +36,12 @@ module CitizenRails
     # lib/ is for code that is entirely independent of your Rails app
     # app/lib/ is for code that expects Rails (esp. models) but which is not itself a model
     config.autoload_paths << Rails.root.join("app", "lib")
+    config.autoload_paths << Rails.root.join("app", "jobs")
 
     # e-mail
     config.action_mailer.delivery_method = :postmark
     config.action_mailer.postmark_settings = { :api_key => ENV['POSTMARK_API_KEY'] }
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.perform_deliveries = true
   end
 end

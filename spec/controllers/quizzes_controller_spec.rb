@@ -1,8 +1,14 @@
 require 'rails_helper'
+
 RSpec.describe QuizzesController, type: :controller do
   let(:valid_attributes) {
     { name: "quiz 1" }
   }
+
+  before do
+    allow(ResultMailer).to receive(:result_email).
+        and_return(double("ResultMailer", :deliver_later => true))
+  end
 
   describe "GET #new" do
     it "assigns a new quiz as @quiz" do
@@ -39,13 +45,13 @@ RSpec.describe QuizzesController, type: :controller do
 
         it "assigns a newly created quiz as @quiz" do
           post :create, { :quiz => valid_attributes }
-          expect(assigns(:quiz)).to be_a(Quiz)
           expect(assigns(:quiz)).to be_persisted
         end
 
         it "redirects to the results" do
           post :create, { :quiz => valid_attributes }
           expect(response).to redirect_to(my_account_path)
+          expect(assigns(:result)).to eq(:badass)
         end
       end
     end
