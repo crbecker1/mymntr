@@ -17,7 +17,7 @@ module Views
     end
 
     def buttonish(size = :small, *extras)
-      result = %i[button radius]
+      result = %i[button]
       result << size
       result.concat extras
     end
