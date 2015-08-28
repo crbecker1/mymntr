@@ -2,7 +2,7 @@ class Views::LoggedOut::Index < Views::Base
   needs :count
 
   def content
-    row(class:'screaming-hero hero-image full-width small-12 medium-10 medium-centered') {
+    row(class:'screaming-hero hero-image full-width small-12') {
 
     }
     row(class:'small-blue-container show-for-small-only') {
