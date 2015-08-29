@@ -12,7 +12,7 @@ class Views::LoggedOut::About < Views::Base
     row(class:'white-container full-width body-copy') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
 
-        h1 "About Mymntr", class: 'heading-style uppercase-style'
+        h1 "About Mymntr", class: 'heading-caps'
 
         h2 "The brain you have is not the brain you are stuck with!", class:'body-title__color'
 
