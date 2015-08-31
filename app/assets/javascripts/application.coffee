@@ -18,3 +18,6 @@
 
 $ ->
   $(document).foundation()
+
+  $('a.open-first').on 'click', ->
+    $('#first-modal').foundation 'reveal', 'open'
