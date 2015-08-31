@@ -22,16 +22,15 @@ module CitizenRails
 
     # one HTTP auth password for the entire site
     config.require_site_login = false # disabled by default
-    config.site_username = 'citizen'
-    config.site_password = 'code'
+    config.site_username = 'smart'
+    config.site_password = 'smart'
 
     config.allow_signup = true
-    config.company_name = "Citizen Code"
-    config.project_name = "Citizen Rails"
-    config.project_slug = "citizen_rails" # must not use dashes
+    config.company_name = "SM+ART"
+    config.project_name = "SM+ART"
+    config.project_slug = "smart" # must not use dashes
     # appears in main layout meta tag
-    config.project_description = "Citizen Rails is an incredible template for early customer development work!"
-    config.contact_email = "contact@example.com"
+    config.project_description = "SM+ART"
 
     # lib/ is for code that is entirely independent of your Rails app
     # app/lib/ is for code that expects Rails (esp. models) but which is not itself a model
@@ -39,8 +38,7 @@ module CitizenRails
     config.autoload_paths << Rails.root.join("app", "jobs")
 
     # e-mail
-    config.action_mailer.delivery_method = :postmark
-    config.action_mailer.postmark_settings = { :api_key => ENV['POSTMARK_API_KEY'] }
+    config.action_mailer.delivery_method = :smtp
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.perform_deliveries = true
   end
