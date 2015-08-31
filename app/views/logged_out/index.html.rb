@@ -26,6 +26,8 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
+    link_to 'Check out the mymntrDECODER', decoder_path
+
     # wide_row(:'blue-container caption-text') {
     #   p "We’re (hot link to ‘about us’) making mymntr with media-makers, change-agents, and neuroscientists with you in mind. What you will experience here is a sneak peak."
     #   p "* Check out the conversations Kevin, your brain guide, (*bio link) had with these amazing humans to explore how their minds work and what makes them tick."
@@ -56,8 +58,6 @@ class Views::LoggedOut::Index < Views::Base
           div(:id => "bioModal", :class => "reveal-modal", "aria-labelledby" => "modalTitle",
                   "aria-hidden"=>"true",  :role =>"dialog", "data-reveal" => nil)
           h2 "Lorne Lanning's Bio", :id => "modalTitle"
-          # p "Lorne Lanning designed Oddworld, one of the breakthrough narrative games and is one of the leading game designers in the world. His work as a trained painter in New York and animator in Hollywood make him a true hybrid original.",:class="lead"
-          # link_to("&#215"),:class => "close-reveal-modal", "aria-label" => "Close"
         }
       }
 

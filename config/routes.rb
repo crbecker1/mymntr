@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'about' => "logged_out#about"
   get 'team' => "logged_out#team"
   get 'contact' => "logged_out#contact"
+  get 'decoder' => "logged_out#decoder"
 
   resources :accounts, only: [:new, :create, :edit, :update]
   resource :session, only: [:new, :create, :destroy]

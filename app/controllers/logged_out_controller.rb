@@ -11,6 +11,9 @@ class LoggedOutController < ApplicationController
   def about
   end
 
+  def decoder
+  end
+
   def index
     @count = Quiz.count
   end
