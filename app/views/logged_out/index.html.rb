@@ -53,11 +53,14 @@ class Views::LoggedOut::Index < Views::Base
       column('small-12 medium-7 large-7') {
         div(class:'flex-video') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
-          link_to("Lorne Lanning", href:"#", 'data-reveal-id':"bioModal")
-
-          div(:id => "bioModal", :class => "reveal-modal", "aria-labelledby" => "modalTitle",
-                  "aria-hidden"=>"true",  :role =>"dialog", "data-reveal" => nil)
-          h2 "Lorne Lanning's Bio", :id => "modalTitle"
+        }
+        div(class:'caption-text') {
+          a "Lorne Lanning's", "data-reveal-id" => "bioModal-1"
+        }
+        div(:id => 'bioModal-1', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+          h2 "Lorne's Bio", id: 'modalTitle'
+          p "Lorne Lanning designed Oddworld, one of the breakthrough narrative games and is one of the leading game designers in the world. His work as a trained painter in New York and animator in Hollywood make him a true hybrid original.", class: 'body-copy'
+          a "x", class: 'close-reveal-modal'
         }
       }
 
@@ -71,21 +74,49 @@ class Views::LoggedOut::Index < Views::Base
     }
 
     row(class:'white-container no-top-padding') {
+
       column('small-12 medium-4 large-4') {
         div(class:'flex-video') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
+        div(class:'caption-text') {
+          a "Monica Thieu's Bio", "data-reveal-id" => "bioModal-2"
+        }
+        div(:id => 'bioModal-2', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+          h2 "Monica's Bio", id: 'modalTitle'
+          p "Monica Thieu is a postdoctorate student in neuroscience at Stanford. She is the youngest college Jeopardy winner, and “melted the buzzer” so well that her winnings paid for her entire college degree.", class: 'body-copy'
+          a "x", class: 'close-reveal-modal'
+        }
       }
+
       column('small-12 medium-4 large-4') {
         div(class:'flex-video') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
+        div(class:'caption-text') {
+          a "Dr. Wallace J. Nichols' Bio", "data-reveal-id" => "bioModal-3"
+        }
+        div(:id => 'bioModal-3', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+          h2 "Dr. Nichols' Bio", id: 'modalTitle'
+          p "Dr. Wallace J. Nichols is the New York Times best selling author of Bluemind. As a marine biologist, explorer, and advocate he is considered the “Cousteau” of our time. Embracing his role as both scientist and advocate, J has helped save two species of turtles, create international advocacy movements, and a burgeoning discussion on how water impacts the brain.", class: 'body-copy'
+          a "x", class: 'close-reveal-modal'
+        }
       }
+
       column('small-12 medium-4 large-4') {
         div(class:'flex-video') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
+        div(class:'caption-text') {
+          a "Nathalia Scherer's Bio", "data-reveal-id" => "bioModal-4"
+        }
+        div(:id => 'bioModal-4', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+          h2 "Nathalia's Bio", id: 'modalTitle'
+          p "Nathalia Scherer is a Dalai Lama Fellow, and part of their compassionate leadership training program. She trained as an engineer, and has also studied dance and languages. Currently, Nathalia is head of Global Relationships for International Connector, an organization that creates solutions that include and engage Millennials.", class: 'body-copy'
+          a "x", class: 'close-reveal-modal'
+        }
       }
+
     }
 
 
