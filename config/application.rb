@@ -31,7 +31,7 @@ module CitizenRails
     config.project_slug = "smart" # must not use dashes
     # appears in main layout meta tag
     config.project_description = "SM+ART"
-    config.contact_email = "smartbot@mymntr.com"
+    config.contact_email = "info@mymntr.com"
 
     # lib/ is for code that is entirely independent of your Rails app
     # app/lib/ is for code that expects Rails (esp. models) but which is not itself a model
