@@ -4,6 +4,6 @@ class ResultMailer < ApplicationMailer
   def result_email(account)
     @account = account
     @result = account.quiz.result
-    mail(to: @account.email, subject: "You are a #{@result.to_s} brain!")
+    mail(to: @account.email, subject: "You have a #{@result.to_s} brain!")
   end
 end
