@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       'type': 2,
       'size': 3,
       'body': '666666',
-      'position': 6,
+      'position': 5,
       'tab': 4,
       'control': 1
     }
