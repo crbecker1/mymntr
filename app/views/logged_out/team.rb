@@ -29,7 +29,6 @@ class Views::LoggedOut::Team < Views::Base
       column('small-12 medium-10 medium-centered large-8 large-centered') {
         column('small-7 text-center small-centered medium-12') {
           h1 "OUR TEAM", class: 'heading-style bottom-spacer__small'
-
           ul(class: 'small-block-grid-1 medium-block-grid-5') {
             li { image_tag('gaynor-sc.png', class: 'circle-border')
               p 'Gaynor Strachan Chun', class: 'body-copy__small text-center'

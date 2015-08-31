@@ -1708,6 +1708,12 @@ li {
   display: inherit;
   line-height: 24px;
 }
+.row.white-container.no-top-padding {
+  padding-top: 0;
+}
+.row.white-container.mobile-padding {
+  padding-top: rem-calc(48);
+}
 .sub-headings {
   font-weight: 400;
   font-size: 18px;

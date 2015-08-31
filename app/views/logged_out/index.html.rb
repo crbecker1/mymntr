@@ -7,7 +7,7 @@ class Views::LoggedOut::Index < Views::Base
     }
     row(class:'small-blue-container show-for-small-only') {
       column('small-9 small-centered text-center'){
-        p "be inspired to know your own mind", class:'heading-style'
+        h1 "be inspired to know your own mind", class:'heading-style'
       }
     }
 
@@ -37,7 +37,7 @@ class Views::LoggedOut::Index < Views::Base
 
     row(class:'blue-container full-width body-copy') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
-        p "Hi, you're invited to build your own culturally relevant user guide for YOUR brain...", class:'body-title'
+        h2 "Hi, you're invited to build your own culturally relevant user guide for YOUR brain...", class:'body-title'
         ul
           li "– A new way to find out what’s going on up there in your own mixture of cells."
           li "– A new way to know how your circuits can amp up your life + work."
@@ -47,12 +47,41 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    row(class:'white-container text-center') {
-      column('small-12 medium-9 medium-centered large-7 large-centered') {
+    row(class:'white-container mobile-padding') {
+      column('small-12 medium-7 large-7') {
+        div(class:'flex-video') {
+          iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
+        }
+      }
+
+      column('small-12 medium-5 large-5') {
+        h2 "The brain you have is not the brain you are stuck with!", class: 'body-title'
+        p "Have they inspired you to get your mymntrPROFILE? (use it to kick ass, boost life skills, and be your own mentor) Click here to take the quiz.", class: 'body-copy'
+        p "Did you check out the mymntrDECODER? It’s there to help you understand the lingo.", class: 'body-copy'
         render partial: "take_action_button"
         p "#{count} people have already!"
       }
     }
+
+    row(class:'white-container no-top-padding') {
+      column('small-12 medium-4 large-4') {
+        div(class:'flex-video') {
+          iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
+        }
+      }
+      column('small-12 medium-4 large-4') {
+        div(class:'flex-video') {
+          iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
+        }
+      }
+      column('small-12 medium-4 large-4') {
+        div(class:'flex-video') {
+          iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
+        }
+      }
+    }
+
+
     javascript "analytics.track('acquisition/visit')"
   end
 end
