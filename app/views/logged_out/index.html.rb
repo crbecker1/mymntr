@@ -51,6 +51,13 @@ class Views::LoggedOut::Index < Views::Base
       column('small-12 medium-7 large-7') {
         div(class:'flex-video') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
+          link_to("Lorne Lanning", href:"#", 'data-reveal-id':"bioModal")
+
+          div(:id => "bioModal", :class => "reveal-modal", "aria-labelledby" => "modalTitle",
+                  "aria-hidden"=>"true",  :role =>"dialog", "data-reveal" => nil)
+          h2 "Lorne Lanning's Bio", :id => "modalTitle"
+          p "Lorne Lanning designed Oddworld, one of the breakthrough narrative games and is one of the leading game designers in the world. His work as a trained painter in New York and animator in Hollywood make him a true hybrid original.",:class="lead"
+          link_to("&#215"),:class => "close-reveal-modal", "aria-label" => "Close"
         }
       }
 
