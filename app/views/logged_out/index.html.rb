@@ -55,7 +55,7 @@ class Views::LoggedOut::Index < Views::Base
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
         div(class:'caption-text') {
-          a "Lorne Lanning's", "data-reveal-id" => "bioModal-1"
+          a "Lorne Lanning's Bio", "data-reveal-id" => "bioModal-1"
         }
         div(:id => 'bioModal-1', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
           h2 "Lorne's Bio", id: 'modalTitle'
