@@ -1623,7 +1623,6 @@ body {
   font-size: 12px;
   color: #3E3E3F;
   line-height: 18px;
-  //padding-top: rem-calc(-12);
 }
 .body-title {
   font-weight: 400;
@@ -1652,6 +1651,11 @@ body {
   font-size: 16px;
   color: #3E3E3F;
   line-height: 20px;
+}
+.columns.small-12.medium-5.large-5.mobile-padding {
+  @media #{$small-only} {
+    padding-top: 2rem;
+  }
 }
 .heading-style {
   font-weight: 500;
@@ -1704,11 +1708,27 @@ body {
 .light-blue-container {
   background: rgba(210,229,236,0.28);
 }
-ul.li {
-  display: inherit;
-  line-height: 24px;
+.link-copy {
+  font-weight: 400;
+  font-size: 16px;
+  color: $info-color;
+  line-height: 22px;
+  text-decoration: underline;
 }
-.row.white-container.no-top-padding {
+.link-copy__small {
+  font-weight: 300;
+  font-size: 14px;
+  color: $info-color;
+  line-height: 22px;
+  text-decoration: underline;
+}
+.link-copy:hover {
+  color: #286A8C;
+}
+.small-margin {
+  margin-bottom: rem-calc(8);
+}
+.row.white-container.variable-padding {
   padding-top: 0;
 }
 .row.white-container.mobile-padding {
@@ -1739,6 +1759,18 @@ ul.li {
 }
 .uppercase-style {
   text-transform: uppercase;
+}
+ul.li {
+  display: inherit;
+  line-height: 24px
+}
+.variable-padding {
+  @media #{$small-only} {
+    padding-top: rem-calc(32);
+  }
+  @media #{$medium-up} {
+    padding-top: rem-calc(0);
+  }
 }
 .white-container {
   color: $palate1-primary;

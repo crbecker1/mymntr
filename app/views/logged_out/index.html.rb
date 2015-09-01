@@ -26,6 +26,10 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fix links, placed decoder link and videos stacking on the bio links
     # wide_row(:'blue-container caption-text') {
     #   p "We’re (hot link to ‘about us’) making mymntr with media-makers, change-agents, and neuroscientists with you in mind. What you will experience here is a sneak peak."
     #   p "* Check out the conversations Kevin, your brain guide, (*bio link) had with these amazing humans to explore how their minds work and what makes them tick."
@@ -49,11 +53,11 @@ class Views::LoggedOut::Index < Views::Base
 
     row(class:'white-container mobile-padding') {
       column('small-12 medium-7 large-7') {
-        div(class:'flex-video') {
+        div(class:'flex-video small-margin') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
-        div(class:'caption-text') {
-          a "Lorne Lanning's Bio", "data-reveal-id" => "bioModal-1"
+        div {
+          a "Lorne Lanning's Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-1"
         }
         div(:id => 'bioModal-1', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
           h2 "Lorne's Bio", id: 'modalTitle'
@@ -62,9 +66,10 @@ class Views::LoggedOut::Index < Views::Base
         }
       }
 
-      column('small-12 medium-5 large-5') {
+      column('small-12 medium-5 large-5 mobile-padding') {
         h2 "The brain you have is not the brain you are stuck with!", class: 'body-title'
         p "Have they inspired you to get your mymntrPROFILE? (use it to kick ass, boost life skills, and be your own mentor) Click here to take the quiz.", class: 'body-copy'
+
         p(class: 'body-copy') {
           text "Did you check out the "
           link_to 'mymntrDECODER', decoder_path
@@ -75,14 +80,13 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    row(class:'white-container no-top-padding') {
-
+    row(class:'white-container variable-padding') {
       column('small-12 medium-4 large-4') {
-        div(class:'flex-video') {
+        div(class:'flex-video small-margin') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
-        div(class:'caption-text') {
-          a "Monica Thieu's Bio", "data-reveal-id" => "bioModal-2"
+        div {
+          a "Monica Thieu's Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-2"
         }
         div(:id => 'bioModal-2', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
           h2 "Monica's Bio", id: 'modalTitle'
@@ -91,12 +95,12 @@ class Views::LoggedOut::Index < Views::Base
         }
       }
 
-      column('small-12 medium-4 large-4') {
-        div(class:'flex-video') {
+      column('small-12 medium-4 large-4 variable-padding') {
+        div(class:'flex-video small-margin') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
-        div(class:'caption-text') {
-          a "Dr. Wallace J. Nichols' Bio", "data-reveal-id" => "bioModal-3"
+        div {
+          a "Dr. Wallace J. Nichols' Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-3"
         }
         div(:id => 'bioModal-3', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
           h2 "Dr. Nichols' Bio", id: 'modalTitle'
@@ -105,12 +109,12 @@ class Views::LoggedOut::Index < Views::Base
         }
       }
 
-      column('small-12 medium-4 large-4') {
-        div(class:'flex-video') {
+      column('small-12 medium-4 large-4 variable-padding') {
+        div(class:'flex-video small-margin') {
           iframe(width:'420', height:'315', src:"https://www.youtube.com/embed/XQu8TTBmGhA?rel=0", frameborder:"0", allowfullscreen:'true')
         }
-        div(class:'caption-text') {
-          a "Nathalia Scherer's Bio", "data-reveal-id" => "bioModal-4"
+        div {
+          a "Nathalia Scherer's Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-4"
         }
         div(:id => 'bioModal-4', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
           h2 "Nathalia's Bio", id: 'modalTitle'
