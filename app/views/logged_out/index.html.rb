@@ -26,8 +26,6 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    link_to 'Check out the mymntrDECODER', decoder_path
-
     # wide_row(:'blue-container caption-text') {
     #   p "We’re (hot link to ‘about us’) making mymntr with media-makers, change-agents, and neuroscientists with you in mind. What you will experience here is a sneak peak."
     #   p "* Check out the conversations Kevin, your brain guide, (*bio link) had with these amazing humans to explore how their minds work and what makes them tick."
@@ -67,7 +65,11 @@ class Views::LoggedOut::Index < Views::Base
       column('small-12 medium-5 large-5') {
         h2 "The brain you have is not the brain you are stuck with!", class: 'body-title'
         p "Have they inspired you to get your mymntrPROFILE? (use it to kick ass, boost life skills, and be your own mentor) Click here to take the quiz.", class: 'body-copy'
-        p "Did you check out the mymntrDECODER? It’s there to help you understand the lingo.", class: 'body-copy'
+        p(class: 'body-copy') {
+          text "Did you check out the "
+          link_to 'mymntrDECODER', decoder_path
+          text "? It's there to help you understand the lingo."
+        }
         render partial: "take_action_button"
         p "#{count} people have already!"
       }
