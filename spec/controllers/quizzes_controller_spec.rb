@@ -8,6 +8,7 @@ RSpec.describe QuizzesController, type: :controller do
   before do
     allow(ResultMailer).to receive(:result_email).
         and_return(double("ResultMailer", :deliver_later => true))
+    allow(SubscribeUserToListJob).to receive(:perform_later)
   end
 
   describe "GET #new" do

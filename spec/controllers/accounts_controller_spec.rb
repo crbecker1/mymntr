@@ -19,6 +19,8 @@ describe AccountsController, type: :controller do
     end
 
     it 'creates a quiz when there is one in the session; resets session' do
+      allow(SubscribeUserToListJob).to receive(:perform_later)
+
       session[:quiz] = {name: "session_quiz"}
       post :create, { account: { email: 'bob@example.com', password: 'password' } }
 
