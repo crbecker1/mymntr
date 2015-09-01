@@ -16,13 +16,21 @@ you have a:"
       when :cant_touch
         render partial: "shared/profiles/cant_touch"
       end
-      text(
-        social_share_button_tag(
-          "MYMNTR",
-          url: "http://mymntr.com",
-          popup: "true"
+      h4 "Share your mymntrPROFILE with friends:"
+      p {
+        text(
+          social_share_button_tag(
+            "MYMNTR",
+            url: "http://mymntr.com",
+            popup: "true"
+          )
         )
-      )
+      }
+      p {
+        text "Did you check out the "
+        link_to "mymntrDECODER", decoder_path
+        text "? It’s there to help you understand the lingo."
+      }
     }
   end
 end
