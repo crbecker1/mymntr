@@ -26,10 +26,6 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> fix links, placed decoder link and videos stacking on the bio links
     # wide_row(:'blue-container caption-text') {
     #   p "We’re (hot link to ‘about us’) making mymntr with media-makers, change-agents, and neuroscientists with you in mind. What you will experience here is a sneak peak."
     #   p "* Check out the conversations Kevin, your brain guide, (*bio link) had with these amazing humans to explore how their minds work and what makes them tick."
@@ -72,7 +68,7 @@ class Views::LoggedOut::Index < Views::Base
 
         p(class: 'body-copy') {
           text "Did you check out the "
-          link_to 'mymntrDECODER', decoder_path
+          link_to 'mymntrDECODER', decoder_path, class: 'link-copy'
           text "? It's there to help you understand the lingo."
         }
         render partial: "take_action_button"
