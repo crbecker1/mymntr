@@ -1760,9 +1760,9 @@ body {
 .uppercase-style {
   text-transform: uppercase;
 }
-ul.li {
-  display: inherit;
-  line-height: 24px
+ul.no-list-styling {
+  list-style-type: none;
+  line-height: 24px;
 }
 .variable-padding {
   @media #{$small-only} {
