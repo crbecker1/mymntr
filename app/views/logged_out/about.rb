@@ -23,10 +23,11 @@ class Views::LoggedOut::About < Views::Base
         h2 "Mymntr takes you on a cultural journey infused with neuroscience.", class: 'body-title__color'
 
         p "We will provide you with really useful content and tools to help you get started:", class:'body-copy'
-        ul
-          li "1. Conversations with amazing change-agents you can watch. Be inspired to know your own mind."
-          li "2. Life skills programs. Kick into them anytime."
-          li "3. Profile tools, tips and tricks. Stay on your own track and share."
+        ol {
+          li { text "Conversations with amazing change-agents you can watch. Be inspired to know your own mind."}
+          li { text "Life skills programs. Kick into them anytime."}
+          li { text "Profile tools, tips and tricks. Stay on your own track and share."}
+        }
         br
         p "Over the next few months we will share some of what we are working on for mymntr. We really want your feedback! Want to know more? Want to help?", class: 'body-copy'
         render partial: "take_action_button"

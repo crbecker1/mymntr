@@ -1577,7 +1577,16 @@ body {
 }
 
 // ====================== Smart Styles
-
+.decoder-page a {
+  font-weight: 400;
+  font-size: 16px;
+  color: $info-color;
+  line-height: 22px;
+  text-decoration: underline;
+}
+.decoder-page a:hover {
+  color: #286A8C;
+}
 .action-button {
   background: #5AC9F0;
   border-radius: 40px;
@@ -1610,6 +1619,12 @@ body {
   color: #3E3E3F;
   line-height: 24px;
 }
+p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #3E3E3F;
+  line-height: 24px;
+}
 .body-copy__small {
   font-weight: 300;
   font-size: 12px;
@@ -1631,6 +1646,12 @@ body {
   line-height: 27px;
 }
 .body-title__color {
+  font-weight: 400;
+  font-size: 18px;
+  color: #286A8C;
+  line-height: 24px;
+}
+h2 {
   font-weight: 400;
   font-size: 18px;
   color: #286A8C;

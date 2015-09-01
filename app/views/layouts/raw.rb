@@ -56,6 +56,11 @@ class Views::Layouts::Raw < Views::Base
                   }
                 }
                 li {
+                  a(href: decoder_path) {
+                    text "LINGO DECODER"
+                  }
+                }
+                li {
                   a(href: contact_path) {
                     text "CONTACT"
                   }
@@ -81,11 +86,13 @@ class Views::Layouts::Raw < Views::Base
 
         content_for?(:body) ? yield(:body) : yield
 
-        if content_for?(:footer)
-          footer(class: :'fat-footer') {
-            yield :footer
+        footer {
+          row(class:'blue-container full-width') {
+            column(class: 'small-12 small-centered medium-6 medium-centered') {
+              p "SM+ART - the science + art of brainpower", class: 'body-caption text-center'
+            }
           }
-        end
+        }
       }
     }
   end
