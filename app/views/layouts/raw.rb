@@ -61,6 +61,11 @@ class Views::Layouts::Raw < Views::Base
                   }
                 }
                 li {
+                  a(href: new_quiz_path) {
+                    text "TAKE QUIZ"
+                  }
+                }
+                li {
                   a(href: contact_path) {
                     text "CONTACT"
                   }
