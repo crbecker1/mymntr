@@ -35,7 +35,8 @@ mymntrHACKS"
             }
 
             column(:"large-12") {
-              f.submit class: buttonish(:medium)
+              f.submit class: buttonish(:medium),
+                onlick: "analytics.track('activation/signup')"
             }
           }
         end
