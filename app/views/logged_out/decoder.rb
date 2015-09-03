@@ -6,7 +6,7 @@ class Views::LoggedOut::Decoder < Views::Base
 
         h1 "Lingo Decoder", class: 'heading-caps'
 
-        h2 "mymntrDECODER: Understand the lingo...", class:'body-title__color'
+        h3 "mymntrDECODER: Understand the lingo...", class:'body-title__color'
         p "We want to help you understand the lingo of the brain, so we’ve put together a glossary of terms and basic brain structures that come up throughout the video conversations, questions, and profiles. You will never have to navigate away from mymntr! Find all you need to know in the mymntrDECODER!"
         p {
           text ""

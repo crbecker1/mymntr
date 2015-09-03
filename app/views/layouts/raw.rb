@@ -57,7 +57,7 @@ class Views::Layouts::Raw < Views::Base
                 }
                 li {
                   a(href: decoder_path) {
-                    text "LINGO DECODER"
+                    text "DECODER"
                   }
                 }
                 li {
@@ -94,7 +94,7 @@ class Views::Layouts::Raw < Views::Base
         content_for?(:body) ? yield(:body) : yield
 
         footer {
-          row(class: 'blue-container full-width') {
+          row(class: 'small-blue-container blue-container full-width') {
             column(class: 'small-12 small-centered medium-6 medium-centered') {
               p "SM+ART - the science + art of brainpower", class: 'body-caption text-center'
             }

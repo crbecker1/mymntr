@@ -1497,13 +1497,6 @@ i { margin: 5px }
 .alert-box.flash-msg {
   margin-bottom: 0;
 }
-.blockquote-grande {
-  @extend %chunko-text;
-  border-left: none;
-  cite {
-    font-style: normal;
-  }
-}
 body {
   background-color: $white;
 }
@@ -1557,16 +1550,6 @@ body {
     @include grid-column($columns: 4);
   }
 }
-.palate-green-on-white {
-  h4 {
-    @extend %chunko-text;
-    color: $palate1-primary;
-  }
-  p {
-    text-align: left;
-  }
-  background-color: $snow;
-}
 .top-bar-section ul li > a {
   @extend %chunko-text;
   text-align: right;
@@ -1577,18 +1560,9 @@ body {
 }
 
 // ====================== Smart Styles
-.decoder-page a {
-  font-weight: 400;
-  font-size: 16px;
-  color: $info-color;
-  line-height: 22px;
-  text-decoration: underline;
-}
-.decoder-page a:hover {
-  color: #286A8C;
-}
+
 .action-button {
-  background: #5AC9F0;
+  background: $warning-color;
   border-radius: 40px;
 }
 .action-button__text {
@@ -1619,12 +1593,7 @@ body {
   color: #3E3E3F;
   line-height: 24px;
 }
-p {
-  font-weight: 300;
-  font-size: 16px;
-  color: #3E3E3F;
-  line-height: 24px;
-}
+
 .body-copy__small {
   font-weight: 300;
   font-size: 12px;
@@ -1651,12 +1620,6 @@ p {
   color: #286A8C;
   line-height: 24px;
 }
-h2 {
-  font-weight: 400;
-  font-size: 18px;
-  color: #286A8C;
-  line-height: 24px;
-}
 .circle-border {
   border: 2px solid $snow;
   border-radius: 50%;
@@ -1677,6 +1640,31 @@ h2 {
   @media #{$small-only} {
     padding-top: 2rem;
   }
+}
+.decoder-page a {
+  font-weight: 400;
+  font-size: 16px;
+  color: $warning-color;
+  line-height: 22px;
+  text-decoration: underline;
+}
+.decoder-page a:hover {
+  color: black;
+}
+.decoder-page h2 {
+  color: $palate1-alert;
+  font-size: 24px;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #3E3E3F;
+}
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #286A8C;
+  line-height: 24px;
 }
 .heading-style {
   font-weight: 500;
@@ -1732,19 +1720,25 @@ h2 {
 .link-copy {
   font-weight: 400;
   font-size: 16px;
-  color: $info-color;
+  color: $warning-color;
   line-height: 22px;
   text-decoration: underline;
 }
 .link-copy__small {
   font-weight: 300;
   font-size: 14px;
-  color: $info-color;
+  color: $warning-color;
   line-height: 22px;
   text-decoration: underline;
 }
 .link-copy:hover {
-  color: #286A8C;
+  color: #3E3E3F;
+}
+p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #3E3E3F;
+  line-height: 24px;
 }
 .small-margin {
   margin-bottom: rem-calc(8);
