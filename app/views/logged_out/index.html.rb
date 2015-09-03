@@ -42,7 +42,7 @@ class Views::LoggedOut::Index < Views::Base
     row(class:'white-container mobile-padding') {
       column('small-12 medium-7 large-7') {
         div(class:'flex-video small-margin') {
-          iframe(width:'560', height:'315', src:"https://www.youtube.com/embed/00q71VOOu2s?rel=0", frameborder:"0", allowfullscreen:'true')
+          div(id: "lorne_player")
         }
         div {
           a "Lorne Lanning's Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-1"
@@ -71,7 +71,7 @@ class Views::LoggedOut::Index < Views::Base
     row(class:'white-container variable-padding') {
       column('small-12 medium-4 large-4') {
         div(class:'flex-video small-margin') {
-          iframe(width:'560', height:'315', src:"https://www.youtube.com/embed/hGHnEUDlsvw?rel=0", frameborder:"0", allowfullscreen:'true')
+          div(id: "monica_player")
         }
         div {
           a "Monica Thieu's Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-2"
@@ -85,7 +85,7 @@ class Views::LoggedOut::Index < Views::Base
 
       column('small-12 medium-4 large-4 variable-padding') {
         div(class:'flex-video small-margin') {
-          iframe(width:'560', height:'315', src:"https://www.youtube.com/embed/Hh7cbTmYrwI?rel=0", frameborder:"0", allowfullscreen:'true')
+          div(id: "wallace_player")
         }
         div {
           a "Dr. Wallace J. Nichols' Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-3"
@@ -99,7 +99,7 @@ class Views::LoggedOut::Index < Views::Base
 
       column('small-12 medium-4 large-4 variable-padding') {
         div(class:'flex-video small-margin') {
-          iframe(width:'560', height:'315', src:"https://www.youtube.com/embed/ehQltJJehNs?rel=0", frameborder:"0", allowfullscreen:'true')
+          div(id: "nathalia_player")
         }
         div {
           a "Nathalia Scherer's Bio", class: 'link-copy__small', "data-reveal-id" => "bioModal-4"
@@ -111,7 +111,5 @@ class Views::LoggedOut::Index < Views::Base
         }
       }
     }
-
-    javascript "analytics.track('acquisition/visit')"
   end
 end

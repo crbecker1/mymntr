@@ -15,6 +15,7 @@ class AccountsController < ApplicationController
     AccountLifecycle.new(@account).create(account_params)
     authorize @account
     if @account.persisted?
+      track('activation/signup')
       login_without_credentials(@account)
       create_quiz_if_needed
       redirect_to my_account_path

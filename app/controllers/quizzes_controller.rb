@@ -4,6 +4,7 @@ class QuizzesController < ApplicationController
   skip_before_filter :require_login, only: [:new, :create]
 
   def new
+    track('quiz/start')
     @quiz = Quiz.new
     render :new, layout: 'logged_out'
   end
@@ -14,6 +15,7 @@ class QuizzesController < ApplicationController
         session[:quiz] = quiz_params
         redirect_to new_account_path
       else
+        track('quiz/restart')
         @quiz = Quiz.new
         render :new, layout: 'logged_out'
       end
@@ -23,6 +25,7 @@ class QuizzesController < ApplicationController
       subscribe_user_to_mailing_list(@result, current_user)
       respond_to do |format|
         if @quiz.save
+          track('quiz/finish')
           format.html { redirect_to my_account_path, notice: 'Quiz was successfully
 created.' }
         else

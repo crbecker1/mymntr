@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'airbrake'
+gem 'analytics-ruby', :require => "segment"
 gem 'awesome_print'
 gem 'cocoon'
 gem 'coffee-rails'

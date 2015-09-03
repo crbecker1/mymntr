@@ -6,15 +6,19 @@ class LoggedOutController < ApplicationController
   end
 
   def team
+    track('acquisition/visit/team')
   end
 
   def about
+    track('acquisition/visit/about')
   end
 
   def decoder
+    track('acquisition/visit/decoder')
   end
 
   def index
+    track('acquisition/visit/home')
     @count = Quiz.count
   end
 

@@ -1,6 +1,6 @@
 class Views::LoggedOut::ActivationButton < Views::Base
   def content
-    div(class: buttonish(:large, :alert, :bordered), onclick: "analytics.track('activation/signup')") {
+    div(class: buttonish(:large, :alert, :bordered)) {
       a(href: "#") {
         text "Activate"
       }

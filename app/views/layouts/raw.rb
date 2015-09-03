@@ -15,6 +15,7 @@ class Views::Layouts::Raw < Views::Base
         javascript_include_tag 'vendor/modernizr'
         javascript_include_tag 'application'
         javascript_include_tag 'feedbacklite'
+        javascript_include_tag 'https://www.youtube.com/iframe_api'
         if Airbrake.configuration.project_id && Airbrake.configuration.api_key
           javascript_include_tag "airbrake-shim",
             "data-airbrake-project-id" => Airbrake.configuration.project_id,
