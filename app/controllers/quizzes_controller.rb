@@ -10,8 +10,13 @@ class QuizzesController < ApplicationController
 
   def create
     if current_user.nil?
-      session[:quiz] = quiz_params
-      redirect_to new_account_path
+      if params[:quiz]
+        session[:quiz] = quiz_params
+        redirect_to new_account_path
+      else
+        @quiz = Quiz.new
+        render :new, layout: 'logged_out'
+      end
     else
       @quiz = current_user.create_quiz(quiz_params)
       @result = @quiz.result
@@ -21,7 +26,7 @@ class QuizzesController < ApplicationController
           format.html { redirect_to my_account_path, notice: 'Quiz was successfully
 created.' }
         else
-          format.html { render :new }
+          format.html { render :new, layout: 'logged_out' }
         end
       end
     end
