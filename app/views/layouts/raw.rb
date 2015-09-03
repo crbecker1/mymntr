@@ -55,9 +55,9 @@ class Views::Layouts::Raw < Views::Base
                     text "OUR TEAM"
                   }
                 }
-                li {
+                li(class: 'no-transform') {
                   a(href: decoder_path) {
-                    text "DECODER"
+                    text "lingoDECODER"
                   }
                 }
                 li {
