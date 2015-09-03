@@ -66,7 +66,7 @@ class Views::Layouts::Raw < Views::Base
                   }
                 }
                 li {
-                  a(href: contact_path) {
+                  a(onclick: "$('#feedbacklite img').click()") {
                     text "CONTACT"
                   }
                 }
