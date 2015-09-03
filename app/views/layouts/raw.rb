@@ -71,7 +71,27 @@ class Views::Layouts::Raw < Views::Base
                   }
                 }
                 if current_user
-                  yield :navigation
+                  li(:class => "has-dropdown") {
+                    a {
+                      i(class: "fi-torso")
+                      text "Account"
+                    }
+                    ul(:class => "dropdown") {
+                      if logged_in?
+                        if policy(:application).admin?
+                          li { link_to 'Admin', admin_path }
+                        end
+
+                        li {
+                          link_to 'Profile', edit_account_path(current_user)
+                        }
+
+                        li {
+                          link_to 'Log out', session_path, method: :delete
+                        }
+                      end
+                    }
+                  }
                 else
                   li {
                     a(href: new_session_path) {
