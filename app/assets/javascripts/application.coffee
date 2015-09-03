@@ -28,6 +28,9 @@ $ ->
   $('.social-share-button-email').click ->
     analytics.track("share/email")
 
+  $(".new_quiz input[type='radio']").click (e) ->
+    analytics.track("quiz/#{e.target.name}")
+
   window.onYouTubeIframeAPIReady = ->
     makePlayer('hGHnEUDlsvw', 'monica')
     makePlayer('Hh7cbTmYrwI', 'wallace')
