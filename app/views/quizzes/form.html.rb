@@ -7,7 +7,8 @@ class Views::Quizzes::Form < Views::Base
     data = YAML::load_file(File.join(__dir__, 'quiz_content.yaml'))
     quiz_content = data["quiz_content"]
 
-    show_explanations_on_questions = (2..12).to_a.shuffle.first(4)
+    show_explanations_on_questions = (2..12).to_a.shuffle.first(3)
+    show_explanations_on_questions << 1
     form_for(quiz) do |f|
       fieldset {
         ol {
