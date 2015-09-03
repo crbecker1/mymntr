@@ -50,6 +50,9 @@ class Views::LoggedOut::Index < Views::Base
 
     row(class:'white-container mobile-padding') {
       column('small-12 medium-7 large-7') {
+
+    row(class:'white-container mobile-padding') {
+      column('small-12 medium-7 large-7') {
         div(class:'flex-video small-margin') {
           iframe(width:'560', height:'315', src:"https://www.youtube.com/embed/00q71VOOu2s?rel=0", frameborder:"0", allowfullscreen:'true')
         }
