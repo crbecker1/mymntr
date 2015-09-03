@@ -122,9 +122,7 @@ class Views::LoggedOut::Index < Views::Base
           a "x", class: 'close-reveal-modal'
         }
       }
-
     }
-
 
     javascript "analytics.track('acquisition/visit')"
   end
