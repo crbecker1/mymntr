@@ -6,7 +6,6 @@ class Views::LoggedOut::Decoder < Views::Base
 
         h1 "Lingo Decoder", class: 'heading-caps'
 
-        h3 "mymntrDECODER: Understand the lingo...", class:'body-title__color'
         p "We want to help you understand the lingo of the brain, so we’ve put together a glossary of terms and basic brain structures that come up throughout the video conversations, questions, and profiles. You will never have to navigate away from mymntr! Find all you need to know in the mymntrDECODER!"
         p {
           text ""
@@ -15,9 +14,17 @@ class Views::LoggedOut::Decoder < Views::Base
         }
         p {
           text "If you do not see a term that you would like to know more about, "
-          link_to "let us know", decoder_path,class:'link-copy'
+          link_to "let us know", onclick: "$('#feedbacklite img').click()", class:'link-copy'
           text " and we will add it for you!"
         }
+        p {
+          text "#ourNeuroFriends: For the neuroscientists who have stopped by, this is a pilot website. With your help we can make it even better."
+          text "We are building our glossary but do not yet have an exhaustive set of definitions and links, only those we felt were the most relevant for the content we have."
+          text "Please "
+          link_to "let us know", onclick: "$('#feedbacklite img').click()", class:'link-copy'
+          text " what links/primary papers and resources we could include. We will acknowledge you! We're all in this together and through collaboration, we can mentor those beyond our classrooms and labs!"
+        }
+
         br
         br
         h2 "Amygdala"
@@ -30,8 +37,12 @@ class Views::LoggedOut::Decoder < Views::Base
         }
 
         h2 "Axon"
-        p "Projections, or nerve fibers, that send electrical impulses away from the cell body to other neurons or groups of neurons in order to communicate with them.
-"
+        p {
+          text "Projections, or nerve fibers, that send electrical impulses away from the "
+          strong "cell body"
+          text" to other neurons or groups of neurons in order to communicate with them."
+        }
+
         h2 "Cell Body"
         p {
           text "Often referred to as ‘soma,’ which is Greek for body, the cell body contains a bunch of different proteins and molecules that (a) determine the particular type of neuron and (b) aid in the transmission of messages that are specific to that particular type of neuron. "
@@ -62,7 +73,8 @@ class Views::LoggedOut::Decoder < Views::Base
           text "on the outer surface of the "
           strong "cortex"
           text ". Different regions of the brain have different cytoarchitecture meaning that different structures of the gray matter in particular locations of the brain perform different functions.Our very own Dr. Weiner has contributed to understanding how the cytoarchitecture of the "
-          text "fusiform gyrus contributes to face perception."
+          strong "fusiform gyrus"
+          text" contributes to face perception."
         }
 
         h2 "Cerebral Cortex"
