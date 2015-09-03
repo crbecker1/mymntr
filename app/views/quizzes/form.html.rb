@@ -10,7 +10,7 @@ class Views::Quizzes::Form < Views::Base
     show_explanations_on_questions = (2..12).to_a.shuffle.first(3)
     show_explanations_on_questions << 1
     form_for(quiz) do |f|
-      fieldset {
+      fieldset(class:'quiz-styling') {
         ol {
           quiz_content.each do |item|
             question_id = item[0]

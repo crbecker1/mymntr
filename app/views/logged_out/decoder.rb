@@ -1,6 +1,10 @@
 class Views::LoggedOut::Decoder < Views::Base
   def content
 
+    row(class:'logo-hero hero-image-logo full-width small-12') {
+
+    }
+
     row(class:'white-container full-width decoder-page') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
 

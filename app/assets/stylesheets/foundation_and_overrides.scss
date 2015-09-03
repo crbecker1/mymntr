@@ -1655,6 +1655,14 @@ body {
   color: $palate1-alert;
   font-size: 24px;
 }
+.quiz-styling {
+  border: none;
+  margin: 1.125rem 0;
+  padding: 0;
+  li {
+    padding-top: rem-calc(32);
+  }
+}
 h1 {
   font-size: 24px;
   font-weight: 400;
@@ -1680,11 +1688,32 @@ h2 {
   padding: rem-calc(32) 0;
   text-transform: uppercase;
 }
+.logo-hero {
+  background-image: asset-url('logo-hero-mobile.jpg');
+  @media #{$medium-up} {
+    background-image: asset-url('logo-hero-medium-up.jpg');
+  }
+}
 .hero-image {
   max-width: 100%;
   background-size: cover;
   background-position: center top;
   padding: rem-calc(250) 0;
+  @media #{$medium-up} {
+    padding: rem-calc(195) 0;
+  }
+  @media #{$large-up} {
+    padding: rem-calc(200) 0;
+  }
+  @media #{$xlarge-up} {
+    padding:rem-calc(300) 0;
+  }
+}
+.hero-image-logo {
+  max-width: 100%;
+  background-size: cover;
+  background-position: center top;
+  padding: rem-calc(66) 0;
   @media #{$medium-up} {
     padding: rem-calc(195) 0;
   }

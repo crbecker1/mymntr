@@ -26,15 +26,6 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    # wide_row(:'blue-container caption-text') {
-    #   p "We’re (hot link to ‘about us’) making mymntr with media-makers, change-agents, and neuroscientists with you in mind. What you will experience here is a sneak peak."
-    #   p "* Check out the conversations Kevin, your brain guide, (*bio link) had with these amazing humans to explore how their minds work and what makes them tick."
-    #   p "* Get your mymntrPROFILE? (use it to kick ass, boost life skills, and be your own mentor)"
-    #   p "* Check out the mymntrDECODER? It will help you understand the lingo of the brain."
-    #   p "* Sign up to get mymntrHACKS to get more tools, tips, and tricks to use that circuitry."
-    #   p "* Tell us what you think. We want your feedback. Click here to SPEAK YOUR MIND."
-    # }
-
     row(class:'blue-container full-width body-copy') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
         h2 "Hi, you're invited to build your own culturally relevant user guide for YOUR brain...", class:'body-title'
@@ -47,9 +38,6 @@ class Views::LoggedOut::Index < Views::Base
         p "We’re making mymntr with media-makers, change-agents, and neuroscientists -- all for you!", class: 'body-copy'
       }
     }
-
-    row(class:'white-container mobile-padding') {
-      column('small-12 medium-7 large-7') {
 
     row(class:'white-container mobile-padding') {
       column('small-12 medium-7 large-7') {
