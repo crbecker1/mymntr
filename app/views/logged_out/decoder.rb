@@ -14,14 +14,18 @@ class Views::LoggedOut::Decoder < Views::Base
         }
         p {
           text "If you do not see a term that you would like to know more about, "
-          link_to "let us know", onclick: "$('#feedbacklite img').click()", class:'link-copy'
+          a(onclick: "$('#feedbacklite img').click()") {
+            text "let us know"
+          }
           text " and we will add it for you!"
         }
         p "#ourNeuroFriends: For the neuroscientists who have stopped by, this is a pilot website. With your help we can make it even better."
         p "We are building our glossary but do not yet have an exhaustive set of definitions and links, only those we felt were the most relevant for the content we have."
         p {
           text "Please "
-          link_to "let us know", onclick: "$('#feedbacklite img').click()", class:'link-copy'
+          a(onclick: "$('#feedbacklite img').click()") {
+            text "let us know"
+          }
           text " what links/primary papers and resources we could include. We will acknowledge you! We're all in this together and through collaboration, we can mentor those beyond our classrooms and labs!"
         }
 
