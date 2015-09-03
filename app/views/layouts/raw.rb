@@ -65,15 +65,17 @@ class Views::Layouts::Raw < Views::Base
                     text "CONTACT"
                   }
                 }
-                li {
-                  a(href: new_session_path) {
-                    text "SIGN IN"
+                if current_user
+                  yield :navigation
+                else
+                  li {
+                    a(href: new_session_path) {
+                      text "SIGN IN"
+                    }
                   }
-                }
+                end
               }
             }
-
-            yield :navigation
           }
 
           flash.each do |name, msg|
@@ -87,7 +89,7 @@ class Views::Layouts::Raw < Views::Base
         content_for?(:body) ? yield(:body) : yield
 
         footer {
-          row(class:'blue-container full-width') {
+          row(class: 'blue-container full-width') {
             column(class: 'small-12 small-centered medium-6 medium-centered') {
               p "SM+ART - the science + art of brainpower", class: 'body-caption text-center'
             }
