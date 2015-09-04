@@ -1800,10 +1800,14 @@ p {
   margin: 1.125rem 0;
   padding: 0;
   li {
-    padding-top: rem-calc(32);
+    padding-top: rem-calc(40);
   }
 }
-
+.quiz-styling {
+  .spacing-top > div {
+    padding-top: rem-calc(8);
+  }
+}
 .row.white-container.variable-padding {
   padding-top: 0;
 }
@@ -1874,6 +1878,7 @@ ul.no-list-styling {
 .top-bar-section ul li.no-transform > a {
   text-transform: none;
 }
+
 
 
 

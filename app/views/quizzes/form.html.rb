@@ -35,19 +35,19 @@ class Views::Quizzes::Form < Views::Base
       b = content_hash["B"]
       p question_text
       div(class: 'row') {
-        div(class: 'large-1 columns') {
+        div(class: 'small-1 columns') {
           f.radio_button(question_id, true)
         }
-        div(class: 'large-11 columns') {
+        div(class: 'small-10 end columns') {
           f.label("#{question_id}_true", a["answer"])
         }
       }
       explanation_popup(question_id, a["explanation"], true) if show_explanation
-      div(class: 'row') {
-        div(class: 'large-1 columns') {
+      div(class: 'row spacing-top') {
+        div(class: 'small-1 columns') {
           f.radio_button(question_id, false)
         }
-        div(class: 'large-11 columns') {
+        div(class: 'small-10 end columns') {
           f.label("#{question_id}_false", b["answer"])
         }
       }
