@@ -9,11 +9,6 @@ class Views::Layouts::LoggedIn < Views::Base
         div(:class => "app-nav") {
           yield :app_navigation
         }
-
-        row(class:'logo-hero hero-image-logo full-width small-12') {
-
-        }
-
         if content_for?(:app_aside)
           div(:class => "app-content") { yield }
 
