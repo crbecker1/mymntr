@@ -21,7 +21,7 @@ class Views::Sessions::New < Views::Base
                 password_field_tag :password, nil, tabindex: 2
               }
               br
-              submit_tag "Sign In", class: buttonish(:medium), tabindex: 3
+              submit_tag "Sign In", class: buttonish(:"action-button action-button__text uppercase-style"), tabindex: 3
             }
           }
         end

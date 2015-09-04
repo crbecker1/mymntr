@@ -1731,6 +1731,9 @@ h2 {
     line-height: 24px;
   }
 }
+input.button {
+  border-radius: 40px;
+}
 .image-size-reduction {
   max-height: rem-calc(320);
   padding-top: rem-calc(32);
