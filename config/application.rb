@@ -26,11 +26,11 @@ module CitizenRails
     config.site_password = 'smart'
 
     config.allow_signup = true
-    config.company_name = "SM+ART"
-    config.project_name = "SM+ART"
+    config.company_name = "mymntr"
+    config.project_name = "mymntr"
     config.project_slug = "smart" # must not use dashes
     # appears in main layout meta tag
-    config.project_description = "SM+ART"
+    config.project_description = "mymntr"
     config.contact_email = "info@mymntr.com"
 
     # lib/ is for code that is entirely independent of your Rails app

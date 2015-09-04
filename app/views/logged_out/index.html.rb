@@ -2,16 +2,16 @@ class Views::LoggedOut::Index < Views::Base
   needs :count
 
   def content
-    row(class:'screaming-hero hero-image full-width small-12') {
+    row(class: 'screaming-hero hero-image full-width small-12') {
 
     }
-    row(class:'small-blue-container show-for-small-only') {
-      column('small-9 small-centered text-center'){
-        h1 "be inspired to know your own mind", class:'heading-style'
+    row(class: 'small-blue-container show-for-small-only') {
+      column('small-9 small-centered text-center') {
+        h1 "be inspired to know your own mind", class: 'heading-style'
       }
     }
 
-    row(class:'white-container intro-blurb') {
+    row(class: 'white-container intro-blurb') {
       column('show-for-medium-up medium-3 medium-offset-1') {
         image_tag('phone-asset.png', class: 'image-size-reduction')
       }
@@ -26,69 +26,69 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    row(class:'blue-container full-width body-copy') {
+    row(class: 'blue-container full-width body-copy') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
-        h2 "We're making mymntr a culturally relevant user guide for your brain with media-makers, change-agents, and neuroscientists.", class:'body-title'
+        h2 "We're making mymntr a culturally relevant user guide for your brain with media-makers, change-agents, and neuroscientists.", class: 'body-title'
         br
         p "What you will experience here is a sneak peek - it's not a finished product... it's a pilot… so, please explore it and connect with us! Do you dig it?!"
         ul {
           li {
             text "Check out our video conversations hosted by brain guide, "
-            a "Dr. Kevin Weiner", class:'link-copy__black', "data-reveal-id" => "bioModal-5"
-            text ", as he explores the minds of some amazing humans and what makes them tick."}
+            a "Dr. Kevin Weiner", class: 'link-copy__black', "data-reveal-id" => "bioModal-5"
+            text ", as he explores the minds of some amazing humans and what makes them tick." }
           div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
             image_tag('kevin-bio.jpg')
             h2 "Dr. Kevin Weiner", id: 'modalTitle'
             p "Kevin is a neuroscientist at Stanford University. Kevin has been scanning brains since he was 19. He received his undergraduate degree from Princeton University in Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg. He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens (home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and 30 cats, Kevin often thinks that animals are smarter than we think! He is your brain guide!", class: 'body-copy'
             a "x", class: 'close-reveal-modal'
           }
-          li {text "Get your mymntrPROFILE. Use it to kick ass, boost life skills, and be your own mentor."}
+          li { text "Get your mymntrPROFILE. Use it to kick ass, boost life skills, and be your own mentor." }
 
-          li {text "Check out the lingoDECODER? It will help you understand the language of the brain."}
+          li { text "Check out the lingoDECODER? It will help you understand the language of the brain." }
 
-          li {text "Sign up for mymntrHACKS. Tools, tips, and tricks to use that circuitry."}
+          li { text "Sign up for mymntrHACKS. Tools, tips, and tricks to use that circuitry." }
         }
 
         h2 {
           text "*Tell us what you think. We want your feedback. "
-          a(onclick: "$('#feedbacklite img').click()", class:'link-copy__black') {
-          text "SPEAK YOUR MIND."
+          a(onclick: "$('#feedbacklite img').click()", class: 'link-copy__black') {
+            text "SPEAK YOUR MIND."
           }
         }
       }
     }
 
 
-    row(class:'white-container small-12 medium-6 medium-centered large-6 large-centered') {
-      row(class:'kevin-bio white-container__small') {
+    row(class: 'white-container small-12 medium-6 medium-centered large-6 large-centered') {
+      row(class: 'kevin-bio white-container__small') {
         column('small-4 medium-3 large-2') {
           image_tag('kevin-bio.jpg')
         }
         column('small-8 medium-8 large-8 end') {
           h2 {
             text "Join mymntr Neuroscientist and Brain Guide, Dr. Kevin Weiner, as he explores the superpowers of super minds -"
-            a " BIO", class:'link-copy', "data-reveal-id" => "bioModal-5"
+            a " BIO", class: 'link-copy', "data-reveal-id" => "bioModal-5"
           }
-        div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-          image_tag('kevin-bio.jpg')
-          h2 "Dr. Kevin Weiner", id: 'modalTitle'
-          p "Kevin is a neuroscientist at Stanford University. Kevin has been scanning brains since he was 19. He received his undergraduate degree from Princeton University in Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg. He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens (home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and 30 cats, Kevin often thinks that animals are smarter than we think! He is your brain guide!", class: 'body-copy'
-          a "x", class: 'close-reveal-modal' }
+          div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+            image_tag('kevin-bio.jpg')
+            h2 "Dr. Kevin Weiner", id: 'modalTitle'
+            p "Kevin is a neuroscientist at Stanford University. Kevin has been scanning brains since he was 19. He received his undergraduate degree from Princeton University in Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg. He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens (home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and 30 cats, Kevin often thinks that animals are smarter than we think! He is your brain guide!", class: 'body-copy'
+            a "x", class: 'close-reveal-modal' }
         }
       }
     }
 
 
-    row(class:'white-container__small medium-11 medium-centered') {
+    row(class: 'white-container__small medium-11 medium-centered') {
       column('small-12 mobile-padding') {
         h1 "The brain you have is not the brain you are stuck with!"
       }
     }
 
 
-    row(class:'medium-11 medium-centered mobile-padding') {
+    row(class: 'medium-11 medium-centered mobile-padding') {
       column('small-12 medium-7 large-7') {
-        div(class:'flex-video small-margin') {
+        div(class: 'flex-video small-margin') {
           div(id: "lorne_player")
         }
         div {
@@ -120,9 +120,9 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    row(class:'white-container medium-11 medium-centered variable-padding') {
+    row(class: 'white-container medium-11 medium-centered variable-padding') {
       column('small-12 medium-4 large-4') {
-        div(class:'flex-video small-margin') {
+        div(class: 'flex-video small-margin') {
           div(id: "monica_player")
         }
         div {
@@ -139,7 +139,7 @@ class Views::LoggedOut::Index < Views::Base
       }
 
       column('small-12 medium-4 large-4 variable-padding') {
-        div(class:'flex-video small-margin') {
+        div(class: 'flex-video small-margin') {
           div(id: "wallace_player")
         }
         div {
@@ -147,16 +147,19 @@ class Views::LoggedOut::Index < Views::Base
           p "Ocean Hero and Best-Selling Author", class: 'body-caption'
         }
         div(:id => 'bioModal-3', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-          image_tag('J-and-KW.jpg')
-
-          h2 "J Nichols", id: 'modalTitle'
-          p "Dr. Wallace J. Nichols is the best-selling author of Blue Mind. As a marine biologist, explorer, and advocate, he is considered the “Cousteau” of our time. Embracing his role as both scientist and advocate, J has helped bring endangered sea turtles back from the brink, protected special places, created international advocacy movements, and built a burgeoning global discussion on how healthy, wild waters positively impact the brain.", class: 'body-copy'
+          div(class: 'small-12 medium-3 large-2 columns') {
+            image_tag('J-and-KW.jpg')
+          }
+          div(class: 'small-12 medium-9 large-10 columns') {
+            h2 "J Nichols", id: 'modalTitle'
+            p "Dr. Wallace J. Nichols is the best-selling author of Blue Mind. As a marine biologist, explorer, and advocate, he is considered the “Cousteau” of our time. Embracing his role as both scientist and advocate, J has helped bring endangered sea turtles back from the brink, protected special places, created international advocacy movements, and built a burgeoning global discussion on how healthy, wild waters positively impact the brain.", class: 'body-copy'
+          }
           a "x", class: 'close-reveal-modal'
         }
       }
 
       column('small-12 medium-4 large-4 variable-padding') {
-        div(class:'flex-video small-margin') {
+        div(class: 'flex-video small-margin') {
           div(id: "nathalia_player")
         }
         div {
