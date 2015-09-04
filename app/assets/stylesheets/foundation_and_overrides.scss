@@ -1747,6 +1747,10 @@ input.button {
   max-height: rem-calc(320);
   padding-top: rem-calc(32);
 }
+.kevin-bio {
+  border: 2px $info-color solid;
+  margin-bottom: rem-calc(48);
+}
 label {
   font-weight: 400;
   font-size: 14px;
@@ -1862,6 +1866,10 @@ ul.no-list-styling {
   @media #{$medium-up} {
     padding: rem-calc(48) 0;
   }
+}
+.white-container__small {
+  color: $palate1-primary;
+  padding: rem-calc(16) 0;
 }
 .top-bar-section ul li.no-transform > a {
   text-transform: none;

@@ -57,11 +57,34 @@ class Views::LoggedOut::Index < Views::Base
         }
       }
     }
-    row(class:'white-container medium-11 medium-centered') {
-        column('small-12 mobile-padding') {
-        h1 "The brain you have is not the brain you are stuck with!", class: ''
+
+
+    row(class:'white-container small-12 medium-6 medium-centered large-6 large-centered') {
+      row(class:'kevin-bio white-container__small') {
+        column('small-4 medium-3 large-2') {
+          image_tag('kevin-bio.jpg')
         }
+        column('small-8 medium-8 large-8 end') {
+          h2 {
+            text "Join mymntr Neuroscientist and Brain Guide, Dr. Kevin Weiner, as he explores the superpowers of super minds -"
+            a " BIO", class:'link-copy', "data-reveal-id" => "bioModal-5"
+          }
+        div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+          image_tag('kevin-bio.jpg')
+          h2 "Dr. Kevin Weiner", id: 'modalTitle'
+          p "Kevin is a neuroscientist at Stanford University. Kevin has been scanning brains since he was 19. He received his undergraduate degree from Princeton University in Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg. He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens (home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and 30 cats, Kevin often thinks that animals are smarter than we think! He is your brain guide!", class: 'body-copy'
+          a "x", class: 'close-reveal-modal' }
+        }
+      }
     }
+
+
+    row(class:'white-container__small medium-11 medium-centered') {
+      column('small-12 mobile-padding') {
+        h1 "The brain you have is not the brain you are stuck with!"
+      }
+    }
+
 
     row(class:'medium-11 medium-centered mobile-padding') {
       column('small-12 medium-7 large-7') {
