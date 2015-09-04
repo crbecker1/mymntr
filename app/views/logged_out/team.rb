@@ -36,7 +36,7 @@ class Views::LoggedOut::Team < Views::Base
             }
             li { image_tag('sara-k.png', class: 'circle-border')
               p 'Sarah Kornfeld', class: 'body-copy__small text-center'
-              p 'Founder/CEO', class: 'body-copy__small-details text-center'
+              p 'Founder/CCO', class: 'body-copy__small-details text-center'
             }
             li { image_tag('chris-b.png', class: 'circle-border')
               p 'Chris R. Becker', class: 'body-copy__small text-center'

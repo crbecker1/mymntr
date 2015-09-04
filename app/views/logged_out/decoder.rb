@@ -8,13 +8,13 @@ class Views::LoggedOut::Decoder < Views::Base
     row(class:'white-container full-width decoder-page') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
 
-        h1 "Lingo Decoder", class: 'heading-caps'
+        h1 "lingoDecoder", class: 'heading-caps'
 
-        p "We want to help you understand the lingo of the brain, so we’ve put together a glossary of terms and basic brain structures that come up throughout the video conversations, questions, and profiles. You will never have to navigate away from mymntr! Find all you need to know in the mymntrDECODER!"
+        p "We want to help you understand the lingo of the brain, so we’ve put together a glossary of terms and basic brain structures that come up throughout the video conversations, questions, and profiles. You will never have to navigate away from mymntr! Find all you need to know in the lingoDECODER!"
         p {
           text ""
           strong "Bold"
-          text " words and phrases in the definitions are also explained in the DECODER."
+          text " words and phrases in the definitions are also explained in the lingoDECODER."
         }
         p {
           text "If you do not see a term that you would like to know more about, "
@@ -23,17 +23,19 @@ class Views::LoggedOut::Decoder < Views::Base
           }
           text " and we will add it for you!"
         }
-        p "#ourNeuroFriends: For the neuroscientists who have stopped by, this is a pilot website. With your help we can make it even better."
-        p "We are building our glossary but do not yet have an exhaustive set of definitions and links, only those we felt were the most relevant for the content we have."
-        p {
+        hr
+        p(class: 'body-copy__small') {
+          text "#ourNeuroFriends: For the neuroscientists who have stopped by, this is a pilot website. With your help we can make it even better. We are building our glossary but do not yet have an exhaustive set of definitions and links, only those we felt were the most relevant for the content we have."
+        p(class: 'body-copy__small') {
           text "Please "
           a(onclick: "$('#feedbacklite img').click()") {
             text "let us know"
           }
           text " what links/primary papers and resources we could include. We will acknowledge you! We're all in this together and through collaboration, we can mentor those beyond our classrooms and labs!"
         }
+        }
 
-        br
+        hr
         br
         h2 "Amygdala"
         p {
@@ -117,15 +119,32 @@ class Views::LoggedOut::Decoder < Views::Base
           a(href:'//wordplay.blogs.nytimes.com/author/gary-antonick/', target: '_blank') {
             text "Gary Antonick"
           }
-          text ", is a divergent thinker. Or watch our conversation with Lorne Lanning to learn more about divergent thinking."
+          text ", is a divergent thinker. Or "
+          a(href:'//www.youtube.com/watch?v=00q71VOOu2s', target: '_blank') {
+            text "watch our conversation with Lorne Lanning"
+          }
+          text " to learn more about divergent thinking."
         }
 
         h2 "Dopamine"
-        p "A great neurotransmitter and pleasure-producer. It’s neurobiologically taxing because our brain needs to make it and we can’t take a drug that gives us straight dopamine. For example, patients with Parkinson’s disease cannot take straight dopamine – they take L-dopa, which is a precursor to dopamine that helps the brain kickstart production of dopamine. All in all, we really need dopamine – it helps us learn, feel great, move, and emote. Watch our conversation with Lorne, where we talk about dopamine."
+        p {
+          text "A great neurotransmitter and pleasure-producer. It's neurobiologically taxing because our brain needs to make it and we can’t take a drug that gives us straight dopamine. For example, patients with Parkinson’s disease cannot take straight dopamine – they take L-dopa, which is a precursor to dopamine that helps the brain kickstart production of dopamine. All in all, we really need dopamine – it helps us learn, feel great, move, and emote. "
+          a(href:'//www.youtube.com/watch?v=00q71VOOu2s', target: '_blank') {
+           text "Watch our conversation with Lorne Lanning"
+          }
+          text ", where we talk about dopamine."
+        }
+
 
         h2 "Embodied cognition"
         p "A theory stressing the role of the environment in the development of cognitive processes. For example, reading the word ‘kick’ would activate portions of your brain that move the leg/foot."
-        p "Related to the videos, embodied cognition would be linked to how an expertise of dancing may help problem-solving. Because Nathalia had experience in dancing, she voiced her experience of ‘dancing around problems.’ This is an example of embodied cognition – how experience with one thing could be applied in a novel way to a different aspect of cognition such as problem solving. Watch our conversation with Nathalia for more about embodied cognition."
+        p {
+          text "Related to the videos, embodied cognition would be linked to how an expertise of dancing may help problem-solving. Because Nathalia had experience in dancing, she voiced her experience of ‘dancing around problems.’ This is an example of embodied cognition – how experience with one thing could be applied in a novel way to a different aspect of cognition such as problem solving. "
+          a(href:'//www.youtube.com/watch?v=ehQltJJehNs', target: '_blank') {
+            text "Watch our conversation with Nathalia"
+          }
+          text " for more about embodied cognition."
+        }
         p {
           text "Or see the most recent summary of embodied cognition from "
           a(href:'//www.wjh.harvard.edu/~caram/publications.html', target: '_blank'){
@@ -171,10 +190,22 @@ class Views::LoggedOut::Decoder < Views::Base
         p "The brain is folded up inside the skull. Due to this folding process, there are indentations and bumps, or hills. These hilly parts of the brain are known as gyri (singular: gyrus)."
 
         h2 "Hippocampus"
-        p "Latin mixed with mythology, greek, and fun indicates that hippocampus is starfish with some fore-feet. From a neuroscientific perspective, it’s a structure that’s crucial for memory – which is also fun because who wouldn’t love some spiraling memories zigzagging through the ocean within our brain?? People with damage to the hippocampus have trouble with memory. Monica, however, does not have trouble with memory and we talk about her hippocampus and memory during Kevin’s conversation with her."
+        p {
+          text "Latin mixed with mythology, greek, and fun indicates that hippocampus is starfish with some fore-feet. From a neuroscientific perspective, it’s a structure that’s crucial for memory – which is also fun because who wouldn’t love some spiraling memories zigzagging through the ocean within our brain?? People with damage to the hippocampus have trouble with memory. Monica, however, does not have trouble with memory and we talk about her hippocampus and memory during "
+          a(href:'//www.youtube.com/watch?v=hGHnEUDlsvw', target: '_blank') {
+            text "Kevin’s conversation with her"
+          }
+          text "."
+        }
 
         h2 "Medial prefrontal cortex (mPFC)"
-        p "A sub-portion of the medial aspect of the frontal lobe that has many different functions such as self-knowledge, action monitoring, person perception, mentalizing, and outcome monitoring. Portions of mPFC are also different in expert meditators compared to novice meditators. There is differential activation in mPFC before and after going for a walk in nature compared to a more urban location. We mention the mPFC in our conversation with J."
+        p {
+          text "A sub-portion of the medial aspect of the frontal lobe that has many different functions such as self-knowledge, action monitoring, person perception, mentalizing, and outcome monitoring. Portions of mPFC are also different in expert meditators compared to novice meditators. There is differential activation in mPFC before and after going for a walk in nature compared to a more urban location. We mention the mPFC in "
+          a(href:'//www.youtube.com/watch?v=Hh7cbTmYrwI', target: '_blank') {
+            text "our conversation with J"
+          }
+          text "."
+        }
 
         h2 "Memory consolidation"
         p {
@@ -182,11 +213,21 @@ class Views::LoggedOut::Decoder < Views::Base
           strong "hippocampus"
           text " to "
           strong "cortex"
-          text ". We talk about this (and incorporate some Candy Crush) in our conversation with Monica."
+          text ". We talk about this (and incorporate some Candy Crush) in "
+          a(href:'//www.youtube.com/watch?v=hGHnEUDlsvw', target: '_blank') {
+            text "our conversation with Monica"
+          }
+          text "."
         }
 
         h2 "Mindset"
-        p "A concept relating achievement and success. There are two different types: fixed and growth. A fixed mindset is: Talent and intelligence are fixed and cannot be developed. A growth mindset is: Ability is developed through growth and hard work. This type of mindset incorporates motivation and hard work. Watch our conversation with Nathalia where growth and fixed mindsets are mentioned."
+        p {
+          text "A concept relating achievement and success. There are two different types: fixed and growth. A fixed mindset is: Talent and intelligence are fixed and cannot be developed. A growth mindset is: Ability is developed through growth and hard work. This type of mindset incorporates motivation and hard work. "
+          a(href:'//www.youtube.com/watch?v=ehQltJJehNs', target: '_blank') {
+          text "Watch our conversation with Nathalia"
+        }
+          text " where growth and fixed mindsets are mentioned."
+        }
         p {
           a(href:'//mindsetonline.com/whatisit/about/', target:'_blank'){
             text "Learn more about both mindsets"
@@ -251,14 +292,24 @@ class Views::LoggedOut::Decoder < Views::Base
           strong "gyri"
           text " and "
           strong "sulci"
-          text ", each with functional roles in different aspects of vision, eye movements, hand movements, memory, the sense of touch, as well as complex processing such as the integration of information across different modalities and even interpreting the intention of others. Watch Kevin's conversation with Nathalia to learn more about the parietal lobe!"
+          text ", each with functional roles in different aspects of vision, eye movements, hand movements, memory, the sense of touch, as well as complex processing such as the integration of information across different modalities and even interpreting the intention of others. "
+          a(href:'//www.youtube.com/watch?v=ehQltJJehNs', target: '_blank') {
+            text "Watch Kevin's conversation with Nathalia"
+          }
+          text " to learn more about the parietal lobe!"
         }
 
         h2 "Perceptron"
         p "A machine learning algorithm that learns to classify one object from another. In the context of our questions, ‘perceptronic’ refers to this classification ability and specifically, the way to classify a new set of characters (such as Lorne Lanning’s aliens in Oddworld) from another."
 
         h2 "Perceptual expertise"
-        p "Bird experts. Car experts. We all know them. They are examples of people with a particular type of perceptual expertise, which is best defined as an enhanced ability to discriminate fine-grained differences between stimuli based off extensive experience. Also, the players of Lorne’s Oddworld have developed a type of perceptual expertise defining each of Lorne’s characters that he has created. Watch Kevin’s conversation with Lorne to find out how this perceptual expertise is linked to the Fusiform gyrus."
+        p {
+          text "Bird experts. Car experts. We all know them. They are examples of people with a particular type of perceptual expertise, which is best defined as an enhanced ability to discriminate fine-grained differences between stimuli based off extensive experience. Also, the players of Lorne’s Oddworld have developed a type of perceptual expertise defining each of Lorne’s characters that he has created. "
+          a(href:'//www.youtube.com/watch?v=00q71VOOu2s', target: '_blank') {
+          text "Watch Kevin’s conversation with Lorne"
+        }
+          text " to find out how this perceptual expertise is linked to the Fusiform gyrus."
+        }
         p {
           a(href:'//global.oup.com/academic/product/perceptual-expertise-9780195309607?cc=us&lang=en&', target: '_blank'){
             text "Read this book"

@@ -29,7 +29,10 @@ class Views::LoggedOut::About < Views::Base
           li { text "Profile tools, tips and tricks. Stay on your own track and share."}
         }
         br
-        p "Over the next few months we will share some of what we are working on for mymntr. We really want your feedback! Want to know more? Want to help?", class: 'body-copy'
+
+        h2 "Inspired to know your own mind?", class: 'body-title__color'
+
+        p "To find out what your brain is good at, take the mymntrPROFILE QUIZ.", class: 'body-copy'
         render partial: "take_action_button"
       }
     }

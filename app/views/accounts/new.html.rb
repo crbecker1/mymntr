@@ -5,16 +5,16 @@ class Views::Accounts::New < Views::Base
     row {
       column(%i[small-12 large-8], :class => :"large-centered") {
         h1("Sign up for your profile")
-        p "We have your results! To get your mymntrPROFILE, please create a mymntr
-account."
         p {
-          text "You'll get your profile right here, right now, and we'll send it to you so
-you have a reminder of how great of a brain you have. We'll also send you weekly
+          text "To get your profile, please share your email. You will then see it right here, right now and via email so you can remind yourself how great your brain is. We'll also send you weekly
 mymntrHACKS"
           text raw "&#8212;"
           text "more tips and tricks based on your profile!"
         }
-        form_for account do |f|
+        p {
+          text "(We won't spam you or sell or distribute your contact info. We think that's bad for your brain and obnoxious.) Your mymntrCREW."
+        }
+form_for account do |f|
           row {
             column(:"large-12") {
               with_errors(account, :email) {
