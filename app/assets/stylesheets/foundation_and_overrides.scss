@@ -1582,9 +1582,9 @@ body {
 .blue-container {
   color: $palate1-primary;
   background-color: $info-color;
-  padding: rem-calc(48) 0;
+  padding: rem-calc(32) 0;
   @media #{$medium-up} {
-    padding: rem-calc(80) 0;
+    padding: rem-calc(48) 0;
   }
 }
 .body-copy {
@@ -1814,6 +1814,12 @@ p {
 }
 .top-spacer {
   padding: rem-calc(64) 0;
+}
+.top-spacer__variable {
+  padding: rem-calc(64) 0;
+  @media #{$medium-up} {
+    padding: rem-calc(80) 0;
+  }
 }
 .top-spacer__mobile {
   padding-top: rem-calc(48);

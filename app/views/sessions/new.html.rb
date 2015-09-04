@@ -1,7 +1,7 @@
 class Views::Sessions::New < Views::Base
   def content
-    row {
-      column(%i[small-12 large-6], :class => :"large-centered") {
+    row(class:'top-spacer__variable'){
+      column(%i[small-12 medium-8 large-6], :class => :"medium-centered large-centered") {
         h1("Sign in")
         p {
           text "Coming back to check your mymntrPROFILE with a new mind? Sign in and take the quiz again! Your mymntrCREW!"
@@ -9,7 +9,7 @@ class Views::Sessions::New < Views::Base
 
         form_tag session_path, method: 'post' do
           row {
-            column(:"large-12") {
+            column(:"small-12 medium-12 large-12") {
               label {
                 text "E-mail: "
                 text_field_tag :email, nil, tabindex: 1, type: 'email'
