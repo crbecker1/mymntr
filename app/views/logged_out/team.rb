@@ -12,7 +12,7 @@ class Views::LoggedOut::Team < Views::Base
     row(class:'white-container full-width body-copy') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
         h1 "SM+ART: THE COMPANY BEHIND MYMNTR", class: 'heading-caps'
-        h2 "Our intention at SM+ART", class:'body-title__color'
+        h2 "Our Intention at SM+ART", class:'body-title__color'
         p "We want to make the living human brain as fun and cool as the apple that made Apple, the red envelope that made Netflix, and that sleek electricity that made Tesla, Tesla. SM+ART is committed to bringing the art+science of brainpower to everyone. Everyone. We do so by packaging, presenting and sharing applied neuroscience in a way that makes it culturally relevant, fun, and useful for our everyday lives.", class:'body-copy'
 
         br
