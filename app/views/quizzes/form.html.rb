@@ -39,7 +39,7 @@ class Views::Quizzes::Form < Views::Base
           f.radio_button(question_id, true)
         }
         div(class: 'large-11 columns') {
-          f.label(:A, a["answer"])
+          f.label("#{question_id}_true", a["answer"])
         }
       }
       explanation_popup(question_id, a["explanation"], true) if show_explanation
@@ -48,7 +48,7 @@ class Views::Quizzes::Form < Views::Base
           f.radio_button(question_id, false)
         }
         div(class: 'large-11 columns') {
-          f.label(:B, b["answer"])
+          f.label("#{question_id}_false", b["answer"])
         }
       }
       explanation_popup(question_id, b["explanation"], false) if show_explanation
