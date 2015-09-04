@@ -1605,6 +1605,9 @@ body {
   padding-top: rem-calc(12);
   margin: 0;
 }
+p.body-copy__small a {
+  font-size: 12px;
+}
 .body-copy__small-details {
   font-weight: 300;
   font-size: 12px;

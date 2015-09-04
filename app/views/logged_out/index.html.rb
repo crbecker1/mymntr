@@ -90,7 +90,6 @@ class Views::LoggedOut::Index < Views::Base
 
         p(class: 'body-copy') {
           br
-          br
           text "Have you checked out the "
           link_to 'lingoDECODER', decoder_path, class: 'link-copy'
           text "? It's here to help you understand the lingo."
