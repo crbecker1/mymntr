@@ -85,9 +85,7 @@ $include-html-global-classes: $include-html-classes;
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-
+$topbar-breakpoint: em-calc(900);
 // We use these to define default font stacks
 $font-family-sans-serif: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif: $font-family-sans-serif;
