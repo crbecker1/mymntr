@@ -8,7 +8,7 @@ world are, and using your laser-like brain, you've invented new ways to work, be
 and do. Your brain is so flexible, 'Plastic Fantastic' doesn't
 even cover it: you simply bend, and never break. People make tee shirts with pictures of
 your brain on it... watch out!"
-    p "In many ways, you are like J. Nichols from our video with Dr.Kevin Weiner.
+    p "In many ways, you are like J. Nichols from our video with Dr. Kevin Weiner.
 Some of J.‘s powers are self-mentoring, being a silent mentor, and Brain Changer!
 Watch the video with J. and Kevin to remind yourself how great a brain you have."
   end
