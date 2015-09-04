@@ -57,13 +57,13 @@ class Views::LoggedOut::Index < Views::Base
         }
       }
     }
-    row(class:'white-container') {
-        column('small-12 medium-12 large-12 mobile-padding') {
-        h4 "The brain you have is not the brain you are stuck with!", class: 'body-title__color'
+    row(class:'white-container medium-11 medium-centered') {
+        column('small-12 mobile-padding') {
+        h1 "The brain you have is not the brain you are stuck with!", class: ''
         }
     }
 
-    row(class:'white-container mobile-padding') {
+    row(class:'medium-11 medium-centered mobile-padding') {
       column('small-12 medium-7 large-7') {
         div(class:'flex-video small-margin') {
           div(id: "lorne_player")
@@ -97,7 +97,7 @@ class Views::LoggedOut::Index < Views::Base
       }
     }
 
-    row(class:'white-container variable-padding') {
+    row(class:'white-container medium-11 medium-centered variable-padding') {
       column('small-12 medium-4 large-4') {
         div(class:'flex-video small-margin') {
           div(id: "monica_player")
