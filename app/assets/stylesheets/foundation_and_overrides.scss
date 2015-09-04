@@ -1488,6 +1488,7 @@ i { margin: 5px }
 .app-content-wide{
   @include grid-column($columns: 12);
   @include padding-leader(.5);
+  padding-top: rem-calc(48);
 }
 .app-aside{
   @include grid-column($columns: 12);
@@ -1564,6 +1565,8 @@ body {
 .action-button {
   background: $warning-color;
   border-radius: 40px;
+  padding: 13px 35px;
+  margin-top: rem-calc(16);
 }
 .action-button__text {
   font-weight: 400;
@@ -1731,12 +1734,20 @@ h2 {
     line-height: 24px;
   }
 }
+
 input.button {
   border-radius: 40px;
+  padding: 13px 35px;
+  margin-top: rem-calc(16);
 }
 .image-size-reduction {
   max-height: rem-calc(320);
   padding-top: rem-calc(32);
+}
+label {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
 }
 .list-items {
   font-weight: 300;

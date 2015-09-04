@@ -6,14 +6,14 @@ module Views
       def content
         row {
           column(:'large-6') {
-            h2("Account Profile")
+            h1("Account Profile")
 
             p {
               text "Email: "
               text account.email
             }
 
-            h4("Change Password")
+            h2("Change Password")
 
             form_for account do |f|
               with_errors(account, :old_password) {
@@ -28,7 +28,7 @@ module Views
                   f.password_field :password
                 }
               }
-              f.submit "Change", class: buttonish(:small, :expand)
+              f.submit "Change", class: buttonish(:"action-button action-button__text uppercase-style")
             end
           }
         }

@@ -6,9 +6,9 @@ module Views
 
       def content
         # TODO: this is nearly identical to Views::AccountClaims::Edit. Definitely refactor if it's similar to change-password.
-        row {
+        row(class:'top-spacer__variable') {
           column(:'medium-6', class: :'medium-centered') {
-            h2("Set a password")
+            h1("Set a password")
             form_for account, url: password_reset_path(token), html: { method: :put } do |f|
               row {
                 column {
@@ -30,7 +30,7 @@ module Views
               }
               row {
                 column {
-                  f.submit "Save", class: buttonish(:small, :expand)
+                  f.submit "Save", class: buttonish(:"action-button action-button__text uppercase-style")
                 }
               }
             end
