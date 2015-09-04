@@ -10,8 +10,8 @@ class Views::Quizzes::Form < Views::Base
     show_explanations_on_questions = (2..12).to_a.shuffle.first(3)
     show_explanations_on_questions << 1
     form_for(quiz) do |f|
-      fieldset(class:'quiz-styling') {
-        ol(class:'medium-8 medium-offset-2') {
+      fieldset(class: 'quiz-styling') {
+        ol(class: 'medium-8 medium-offset-2') {
           quiz_content.each do |item|
             question_id = item[0]
             question_gets_popup = show_explanations_on_questions.include?(question_id
@@ -34,12 +34,23 @@ class Views::Quizzes::Form < Views::Base
       a = content_hash["A"]
       b = content_hash["B"]
       p question_text
-      f.radio_button(question_id, true)
-      f.label(:A, a["answer"])
+      div(class: 'row') {
+        div(class: 'large-1 columns') {
+          f.radio_button(question_id, true)
+        }
+        div(class: 'large-11 columns') {
+          f.label(:A, a["answer"])
+        }
+      }
       explanation_popup(question_id, a["explanation"], true) if show_explanation
-      br
-      f.radio_button(question_id, false)
-      f.label(:B, b["answer"])
+      div(class: 'row') {
+        div(class: 'large-1 columns') {
+          f.radio_button(question_id, false)
+        }
+        div(class: 'large-11 columns') {
+          f.label(:B, b["answer"])
+        }
+      }
       explanation_popup(question_id, b["explanation"], false) if show_explanation
     }
   end
@@ -50,7 +61,7 @@ class Views::Quizzes::Form < Views::Base
 
     div(id: "radio_#{question_id}_#{category}", class: "reveal-modal",
       "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog",
-    "data-reveal"=>"") {
+      "data-reveal" => "") {
       br
       p explanation
       a(class: "close-reveal-modal", "aria-label" => "Close") {
