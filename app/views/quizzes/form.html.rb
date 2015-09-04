@@ -11,7 +11,7 @@ class Views::Quizzes::Form < Views::Base
     show_explanations_on_questions << 1
     form_for(quiz) do |f|
       fieldset(class:'quiz-styling') {
-        ol {
+        ol(class:'medium-8 medium-offset-2') {
           quiz_content.each do |item|
             question_id = item[0]
             question_gets_popup = show_explanations_on_questions.include?(question_id
@@ -19,7 +19,7 @@ class Views::Quizzes::Form < Views::Base
             add_question_and_answers item, f, question_gets_popup
           end
         }
-        div(:class => "actions") {
+        div(:class => "actions medium-8 medium-offset-2") {
           f.submit "Get Result!", class: buttonish
         }
       }
