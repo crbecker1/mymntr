@@ -20,7 +20,7 @@ class Views::Quizzes::Form < Views::Base
           end
         }
         div(:class => "actions medium-8 medium-offset-2") {
-          f.submit "Get Result!", class: buttonish
+          f.submit "Get Result!", class: buttonish(:"action-button action-button__text uppercase-style")
         }
       }
     end

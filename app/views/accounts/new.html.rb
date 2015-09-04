@@ -35,7 +35,7 @@ form_for account do |f|
             }
 
             column(:"large-12") {
-              f.submit class: buttonish(:medium)
+              f.submit class: buttonish(:"action-button action-button__text uppercase-style")
             }
           }
         end

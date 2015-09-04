@@ -117,7 +117,10 @@ class Views::Layouts::Raw < Views::Base
         footer {
           row(class: 'small-blue-container blue-container full-width') {
             column(class: 'small-12 small-centered medium-6 medium-centered') {
-              p "SM+ART - 2015", class: 'body-caption text-center'
+              p(class: 'body-caption text-center') {
+                text raw "&#169;"
+                text "SM+ART - 2015"
+              }
             }
           }
         }
