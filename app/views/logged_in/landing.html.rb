@@ -28,7 +28,7 @@ you have a:"
       }
       p {
         text "Did you check out the "
-        link_to "mymntrDECODER", decoder_path, class: 'link-copy'
+        link_to "lingoDECODER", decoder_path, class: 'link-copy'
         text "? It’s there to help you understand the lingo."
       }
     }

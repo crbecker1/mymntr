@@ -8,7 +8,7 @@ class Views::LoggedOut::Decoder < Views::Base
     row(class:'white-container full-width decoder-page') {
       column('small-12 medium-9 medium-centered large-7 large-centered') {
 
-        h1 "lingoDecoder", class: 'heading-caps'
+        h1 "lingoDECODER"
 
         p "We want to help you understand the lingo of the brain, so we’ve put together a glossary of terms and basic brain structures that come up throughout the video conversations, questions, and profiles. You will never have to navigate away from mymntr! Find all you need to know in the lingoDECODER!"
         p {
