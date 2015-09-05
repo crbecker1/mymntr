@@ -1,6 +1,7 @@
 class Views::Shared::Profiles::CantTouch < Views::Base
   def content
-    strong "Can't Touch This!"
+    strong "Can't Touch This!", class: 'orange-title'
+    hr
     p "You're stealth, agile, and can make genius out of nothing using your social
     and emotional intelligence like a weapon! Yup, you're an
     artist of sorts – with your hands or mind – though you also read people like an x-ray.

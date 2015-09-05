@@ -1,6 +1,7 @@
 class Views::Shared::Profiles::OmBaby < Views::Base
   def content
-    strong "OM-Baby!"
+    strong "OM-Baby!", class: 'orange-title'
+    hr
     p "Who knew a person who could control their mind could literally move
 mountains?! When did you first know you could do that? Like, when you were a baby and
 you could just go to your 'quiet place' and then, BOOM!, you'd moved a chair! Wow, you

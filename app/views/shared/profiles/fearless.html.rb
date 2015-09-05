@@ -1,6 +1,7 @@
 class Views::Shared::Profiles::Fearless < Views::Base
   def content
-    strong "Fearless Focus Freak On!"
+    strong "Fearless Focus Freak On!", class: 'orange-title'
+    hr
     p "You're brave, focused, and can handle stress in the moment to get what you
 want, like, GET WHAT YOU WANT (all Caps, thank you)... and yet, you're not a total jerk.
 How do you do that? Have a way of winning the prize, gathering a crowd, and breaking

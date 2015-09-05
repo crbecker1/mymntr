@@ -1,6 +1,7 @@
 class Views::Shared::Profiles::Badass < Views::Base
   def content
-    strong "Bad-*ss-Brain!"
+    strong "Bad-*ss-Brain!", class: 'orange-title'
+    hr
     p "You have that inner swagger that is its own power, though it wasn't always
 easy. When your pod dropped you off on earth, you didn't even speak our language, and
 you felt like an alien in crazy-land. You've always seen where the broken parts of the

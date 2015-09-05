@@ -97,7 +97,6 @@ $font-family-serif: $font-family-sans-serif;
 $palate1-primary: #3E3E3F;
 $palate1-secondary: #FADCA3;
 $palate1-alert: #EA3C31;
-
 // We use these as default colors throughout
 $primary-color: $palate1-primary; // teal
 $secondary-color: #e7e7e7;        // another gray
@@ -1475,9 +1474,15 @@ i { margin: 5px }
 .app-nav{
   @include grid-column($columns: 12);
   @include padding-leader(.5);
-  background: $primary-color;
+  background: $palate1-secondary;
   li a:not(.button){
       color: white;
+  }
+  .heading {
+      font-size: 2rem;
+      color: $palate1-primary;
+      text-align: center;
+      padding-top: 20px;
   }
 }
 .app-content{
@@ -1909,4 +1914,23 @@ i.large { font-size: 1.5rem; }
   }
 }
 
+.orange-title {
+    color: $palate1-alert;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.logged_in-landing {
+  h2 {
+    margin-top: 3rem;
+  }
+  hr {
+      display: block;
+      height: 2px;
+      border: 0;
+      border-top: 1px solid $palate1-primary;
+      margin: 10px 0;
+      padding: 0;
+  }
+}
 

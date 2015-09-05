@@ -7,6 +7,8 @@ class Views::Layouts::LoggedIn < Views::Base
     content_for :body do
       div(:class => "app-container") {
         div(:class => "app-nav") {
+          image_tag('smart-logo.png')
+          p "mymntr", class: 'heading'
           yield :app_navigation
         }
         if content_for?(:app_aside)
