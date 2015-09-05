@@ -62,7 +62,8 @@ class Views::Quizzes::Form < Views::Base
     div(id: "radio_#{question_id}_#{category}", class: "reveal-modal",
       "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog",
       "data-reveal" => "") {
-      br
+      h2 "Based on your answer:"
+      hr
       p explanation
       a(class: "close-reveal-modal", "aria-label" => "Close") {
         text "×"

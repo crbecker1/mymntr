@@ -1892,27 +1892,7 @@ i.small { font-size: 1rem; }
 i.medium { font-size: 1.2rem; }
 i.large { font-size: 1.5rem; }
 
-.reveal-modal {
-  h2 {
-    font-size: 1.6rem;
-    color: $light-warning-color;
-  }
-  hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid $light-warning-color;
-      margin: 1em 0;
-      padding: 0;
-  }
-  img {
-    border: 3px solid $light-warning-color;
-    margin-bottom: 1.5em;
-  }
-  .close-reveal-modal{
-    color: $light-warning-color;
-  }
-}
+
 
 .orange-title {
     color: $palate1-alert;
@@ -1932,5 +1912,46 @@ i.large { font-size: 1.5rem; }
       margin: 10px 0;
       padding: 0;
   }
+  .reveal-modal {
+    h2 {
+      font-size: 1.6rem;
+      color: $light-warning-color;
+    }
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $light-warning-color;
+        margin: 1em 0;
+        padding: 0;
+    }
+    img {
+      border: 3px solid $light-warning-color;
+      margin-bottom: 1.5em;
+    }
+    .close-reveal-modal{
+      color: $light-warning-color;
+    }
+  }
 }
 
+.quizzes-new {
+  .reveal-modal {
+    background-color: $info-color;
+    h2 {
+      font-size: 1.6rem;
+      color: $palate1-primary;
+    }
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $palate1-primary;
+        margin: 1em 0;
+        padding: 0;
+    }
+    .close-reveal-modal{
+      color: $palate1-primary;
+    }
+  }
+}
