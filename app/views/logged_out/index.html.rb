@@ -95,12 +95,10 @@ class Views::LoggedOut::Index < Views::Base
           a "Lorne Lanning", class: 'link-copy__small', "data-reveal-id" => "bioModal-1"
           p "Gaming Guru", class: 'body-caption'
         }
-        div(:id => 'bioModal-1', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-          image_tag('kevin-and-lorne.jpg')
-
-          h2 "Lorne Lanning", id: 'modalTitle'
-          p "Lorne is the creator of Oddworld, one of the breakthrough narrative game universes and is one of the leading game designers in the world. His work as a trained painter in New York and animator in Hollywood make him a true hybrid original.", class: 'body-copy'
-          a "x", class: 'close-reveal-modal'
+        modal('bioModal-1', 'Lorne Lanning', 'kevin-and-lorne.jpg'){
+          "Lorne is the creator of Oddworld, one of the breakthrough narrative game
+universes and is one of the leading game designers in the world. His work as a trained
+painter in New York and animator in Hollywood make him a true hybrid original."
         }
       }
 
@@ -129,12 +127,10 @@ class Views::LoggedOut::Index < Views::Base
           a "Monica Thieu", class: 'link-copy__small', "data-reveal-id" => "bioModal-2"
           p "Jeopardy Winner + Neuroscience Major", class: 'body-caption'
         }
-        div(:id => 'bioModal-2', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-          image_tag('monica-and-KW.jpg')
-
-          h2 "Monica Thieu", id: 'modalTitle'
-          p "Monica is a full-time neuroscience researcher at Stanford. She is the youngest college Jeopardy winner, and \"melted the buzzer\" so well that her winnings helped pay for her college degree.", class: 'body-copy'
-          a "x", class: 'close-reveal-modal'
+        modal('bioModal-2', 'Monica Thieu', 'monica-and-KW.jpg') {
+          "Monica is a full-time neuroscience researcher at Stanford. She is the youngest
+college Jeopardy winner, and \"melted the buzzer\" so well that her winnings helped pay
+for her college degree."
         }
       }
 
@@ -146,15 +142,13 @@ class Views::LoggedOut::Index < Views::Base
           a "J Nichols", class: 'link-copy__small', "data-reveal-id" => "bioModal-3"
           p "Ocean Hero and Best-Selling Author", class: 'body-caption'
         }
-        div(:id => 'bioModal-3', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-          div(class: 'small-12 medium-3 large-2 columns') {
-            image_tag('J-and-KW.jpg')
-          }
-          div(class: 'small-12 medium-9 large-10 columns') {
-            h2 "J Nichols", id: 'modalTitle'
-            p "Dr. Wallace J. Nichols is the best-selling author of Blue Mind. As a marine biologist, explorer, and advocate, he is considered the “Cousteau” of our time. Embracing his role as both scientist and advocate, J has helped bring endangered sea turtles back from the brink, protected special places, created international advocacy movements, and built a burgeoning global discussion on how healthy, wild waters positively impact the brain.", class: 'body-copy'
-          }
-          a "x", class: 'close-reveal-modal'
+        modal('bioModal-3', 'J Nichols', 'J-and-KW.jpg') {
+          "Dr. Wallace J. Nichols is the best-selling author of Blue Mind. As a marine
+biologist, explorer, and advocate, he is considered the “Cousteau” of our time. Embracing
+his role as both scientist and advocate, J has helped bring endangered sea turtles back
+from the brink, protected special places, created international advocacy movements, and
+built a burgeoning global discussion on how healthy, wild waters positively impact the
+brain."
         }
       }
 
@@ -166,14 +160,28 @@ class Views::LoggedOut::Index < Views::Base
           a "Nathalia Scherer", class: 'link-copy__small', "data-reveal-id" => "bioModal-4"
           p "Dalai Lama Fellow", class: 'body-caption'
         }
-        div(:id => 'bioModal-4', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-          image_tag('nathalia-and-kev.jpg')
-
-          h2 "Nathalia Scherer", id: 'modalTitle'
-          p "Nathalia is a Dalai Lama Fellow, and part of their compassionate leadership training program. She trained as an engineer, and has also studied dance and languages. Currently, Nathalia is head of Global Relationships for International Connector, an organization that creates solutions that include and engage Millennials.", class: 'body-copy'
-          a "x", class: 'close-reveal-modal'
+        modal('bioModal-4', 'Nathalia Scherer', 'nathalia-and-kev.jpg') {
+          "Nathalia is a Dalai Lama Fellow, and part of their compassionate leadership
+training program. She trained as an engineer, and has also studied dance and languages.
+Currently, Nathalia is head of Global Relationships for International Connector, an
+organization that creates solutions that include and engage Millennials."
         }
       }
+    }
+  end
+
+  def modal(id, name, img_path, &block)
+    div(:id => id, :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" =>
+        "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
+      h2 name, id: 'modalTitle'
+      hr
+      div(class: 'small-12 medium-3 large-2 columns') {
+        image_tag(img_path)
+      }
+      div(class: 'small-12 medium-9 large-10 columns') {
+        p block.call, class: 'body-copy'
+      }
+      a "x", class: 'close-reveal-modal'
     }
   end
 end
