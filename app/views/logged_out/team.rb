@@ -75,6 +75,27 @@ class Views::LoggedOut::Team < Views::Base
         }
       }
     }
+
+    row(class: 'white-container full-width body-copy') {
+      column('small-12 medium-9 medium-centered large-7 large-centered') {
+        h1 "Special thanks to:", class: 'heading-caps'
+        div(class: 'body-copy') {
+          ul {
+            [
+              'Citizen Code',
+              'Aaron Lucich, In Process Media',
+              'Lorne Lanning',
+              'Monica Thieu',
+              'Dr. Wallace J. Nichols',
+              'Nathalia Scherer',
+              'Dr. M.A. Greenstein'
+            ].each do |thanks|
+              li { text thanks }
+            end
+          }
+        }
+      }
+    }
   end
 
   def face(image_path, name, title, linkedin_path, facebook_path, google_path,
