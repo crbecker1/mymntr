@@ -115,11 +115,11 @@ $sub-heading: #286A8C;
 $snow        : #F9F9F9;
 $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
+ $silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
-// $base        : #AAAAAA;
+ $base        : #AAAAAA;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
@@ -1877,6 +1877,14 @@ ul.no-list-styling {
   text-transform: none;
 }
 
+.logged_out-team {
+  i {
+    color: $silver;
+  }
+}
+i.small { font-size: 1rem; }
+i.medium { font-size: 1.2rem; }
+i.large { font-size: 1.5rem; }
 
 
 
