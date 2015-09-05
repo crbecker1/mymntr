@@ -115,11 +115,24 @@ class Views::Layouts::Raw < Views::Base
         content_for?(:body) ? yield(:body) : yield
 
         footer {
-          row(class: 'small-blue-container blue-container full-width') {
-            column(class: 'small-12 small-centered medium-6 medium-centered') {
+          div(class: 'row small-blue-container blue-container large-centered large-12
+full-width text-center') {
+            div(class: 'small-12 medium-4 large-4 columns') {
+              i(class: 'fi-map')
+              p 'Built in San Francisco, California'
+            }
+            div(class: 'small-12 medium-4 large-4 columns') {
+              i(class: 'fi-telephone')
+              p '1-415-516-4186'
+            }
+            div(class: 'small-12 medium-4 large-4 columns') {
+              i(class: 'fi-mail')
+              p 'info@mymntr.com'
+            }
+            div(class: 'small-12 medium-12 large-12 columns') {
               p(class: 'body-caption text-center') {
                 text raw "&#169;"
-                text "SM+ART - 2015"
+                text "SM+ART #{Time.now.year}. All Rights Reserved."
               }
             }
           }
