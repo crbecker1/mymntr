@@ -61,13 +61,14 @@ class Views::LoggedOut::Index < Views::Base
 
     row(class: 'white-container small-12 medium-6 medium-centered large-6 large-centered') {
       row(class: 'kevin-bio white-container__small') {
-        column('small-4 medium-3 large-2') {
+        div(class: 'small-4 medium-3 large-2 columns') {
           image_tag('kevin-bio.jpg')
         }
-        column('small-8 medium-8 large-8 end') {
+        div(class: 'small-8 medium-8 large-10 columns') {
           h2 {
-            text "Join mymntr Neuroscientist and Brain Guide, Dr. Kevin Weiner, as he explores the superpowers of super minds -"
-            a " BIO", class: 'link-copy', "data-reveal-id" => "bioModal-5"
+            text "Join mymntr Neuroscientist and Brain Guide, "
+            text "Dr. Kevin Weiner, as he explores the superpowers of super minds. "
+            a "BIO", class: 'link-copy', "data-reveal-id" => "bioModal-5"
           }
           div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
             image_tag('kevin-bio.jpg')
