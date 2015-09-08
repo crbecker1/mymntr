@@ -13,7 +13,8 @@ your brain on it... watch out!"
       text "In many ways, you are like J. Nichols from our video with Dr. Kevin Weiner.
 Some of J.‘s powers are self-mentoring, being a silent mentor, and Brain Changer! "
       link_to "Watch the video with J. and Kevin", "//www.youtube.com/watch?v=Hh7cbTmYrwI", target: "_blank",
-        class: "link-copy"
+        class: "link-copy", onclick: "analytics.track
+('video/play/wallace_player/profile')"
       text " to remind yourself how great a brain you have."
     }
   end

@@ -14,7 +14,8 @@ class Views::Shared::Profiles::CantTouch < Views::Base
       "Actually, you're a lot like Jeopardy game-winner, Monica: Her superpowers are
     amazing memory, de-activating stress, and the power of sleep. Sound like you? "
       link_to 'Watch the video with Monica and Kevin', '//www.youtube
-.com/watch?v=hGHnEUDlsvw', target: '_blank', class: 'link-copy'
+.com/watch?v=hGHnEUDlsvw', target: '_blank', class: 'link-copy',
+        onclick: "analytics.track('video/play/monica_player/profile')"
       text ' to remind yourself how great a brain you have.'
     }
   end

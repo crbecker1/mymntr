@@ -12,8 +12,8 @@ want to have a beer with you – that is, if you're of age! Or, watch you do it!
       text "You are also a lot like world famous game designer Lorne Lanning! Some of his
 Superpowers are intense perceptual expertise, battling fear, and creating something out
 of nothing! Sound like you? "
-      link_to "Watch the video with Lorne and Kevin", 'https://www.youtube.com/watch?v=00q71VOOu2s', class: 'link-copy', target:
-          '_blank'
+      link_to "Watch the video with Lorne and Kevin", '//www.youtube.com/watch?v=00q71VOOu2s', class: 'link-copy', target:
+          '_blank', onclick: "analytics.track('video/play/lorne_player/profile')"
       text " to remind yourself how great a brain you have."
     }
   end
