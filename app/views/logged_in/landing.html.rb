@@ -21,7 +21,7 @@ you have a:"
         text(
           social_share_button_tag(
             "I took the mymntrPROFILE QUIZ and learned that I'm '#{profile_name(quiz)}'",
-            url: "http://smart-staging.herokuapp.com",
+            url: "http://www.mymntr.com",
             popup: "true"
           )
         )
