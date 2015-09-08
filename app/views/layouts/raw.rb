@@ -9,6 +9,8 @@ class Views::Layouts::Raw < Views::Base
         meta(:content => Rails.application.config.project_description, :name => "description")
         meta(:content => asset_url('screaming-hero-medium.jpg'), :name =>
             "og:image")
+        meta(:content => "I took the mymntrPROFILE QUIZ and learned that the brain I have is not the one I'm stuck with! Take the quiz and discover your brainy superpowers.", :name =>
+            "og:description")
 
         title(content_for?(:title) ? yield(:title) : Rails.application.config.project_name)
 
