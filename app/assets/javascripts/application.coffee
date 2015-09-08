@@ -49,7 +49,3 @@ $ ->
   onPlayerStateChange = (event) ->
     if event.data == YT.PlayerState.PLAYING
       analytics.track("video/play/#{event.target.f.id}")
-
-
-  monica_player = undefined
-  wallace_player = undefined

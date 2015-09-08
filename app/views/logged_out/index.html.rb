@@ -35,13 +35,9 @@ class Views::LoggedOut::Index < Views::Base
           li {
             text "Check out our video conversations hosted by brain guide, "
             a "Dr. Kevin Weiner", class: 'link-copy__black', "data-reveal-id" => "bioModal-5"
-            text ", as he explores the minds of some amazing humans and what makes them tick." }
-          div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-            image_tag('kevin-bio.jpg')
-            h2 "Dr. Kevin Weiner", id: 'modalTitle'
-            p "Kevin is a neuroscientist at Stanford University. Kevin has been scanning brains since he was 19. He received his undergraduate degree from Princeton University in Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg. He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens (home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and 30 cats, Kevin often thinks that animals are smarter than we think! He is your brain guide!", class: 'body-copy'
-            a "x", class: 'close-reveal-modal'
+            text ", as he explores the minds of some amazing humans and what makes them tick."
           }
+
           li { text "Get your mymntrPROFILE. Use it to kick ass, boost life skills, and be your own mentor." }
 
           li { text "Check out the lingoDECODER? It will help you understand the language of the brain." }
@@ -70,11 +66,15 @@ class Views::LoggedOut::Index < Views::Base
             text "Dr. Kevin Weiner, as he explores the superpowers of super minds. "
             a "BIO", class: 'link-copy', "data-reveal-id" => "bioModal-5"
           }
-          div(:id => 'bioModal-5', :class => "reveal-modal", "data-reveal" => "", "aria-labelledby" => "modalTitle", "aria-hidden" => "true", "role" => "dialog") {
-            image_tag('kevin-bio.jpg')
-            h2 "Dr. Kevin Weiner", id: 'modalTitle'
-            p "Kevin is a neuroscientist at Stanford University. Kevin has been scanning brains since he was 19. He received his undergraduate degree from Princeton University in Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg. He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens (home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and 30 cats, Kevin often thinks that animals are smarter than we think! He is your brain guide!", class: 'body-copy'
-            a "x", class: 'close-reveal-modal' }
+          modal('bioModal-5', 'Dr. Kevin Weiner', 'kevin-bio.jpg') {
+            "Kevin is a neuroscientist at Stanford University. Kevin has been scanning
+brains since he was 19. He received his undergraduate degree from Princeton University in
+Psychology and Neuroscience. While at Princeton, he also studied poetry with Linda Gregg.
+He received his PhD at Stanford University. Kevin is straight outta the Pine Barrens
+(home of the Jersey Devil) in the back woods of New Jersey. Growing up with 15 dogs and
+30 cats, Kevin often thinks that animals are smarter than we think! He is your brain
+guide!"
+          }
         }
       }
     }
@@ -96,7 +96,7 @@ class Views::LoggedOut::Index < Views::Base
           a "Lorne Lanning", class: 'link-copy__small', "data-reveal-id" => "bioModal-1"
           p "Gaming Guru", class: 'body-caption'
         }
-        modal('bioModal-1', 'Lorne Lanning', 'kevin-and-lorne.jpg'){
+        modal('bioModal-1', 'Lorne Lanning', 'kevin-and-lorne.jpg') {
           "Lorne is the creator of Oddworld, one of the breakthrough narrative game
 universes and is one of the leading game designers in the world. His work as a trained
 painter in New York and animator in Hollywood make him a true hybrid original."
