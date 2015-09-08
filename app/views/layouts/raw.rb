@@ -86,7 +86,9 @@ class Views::Layouts::Raw < Views::Base
                         li {
                           link_to 'Profile', edit_account_path(current_user)
                         }
-
+                        li {
+                          link_to 'Results', my_account_path
+                        }
                         li {
                           link_to 'Log out', session_path, method: :delete
                         }
