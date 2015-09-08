@@ -10,8 +10,12 @@ class Views::Shared::Profiles::CantTouch < Views::Base
     \"Oh, THIS? You mean, THIS can't be done!\"  You zip and zoom and make it happen, then
     you have a way of picking up the pieces of a person's ego and helping them feel like
     they've been part of creating something great. Wow, you're good."
-    p "Actually, you're a lot like Jeopardy game-winner, Monica: Her superpowers are
-    amazing memory, de-activating stress, and the power of sleep. Sound like you? Watch the
-    video with Monica and Kevin to remind yourself how great a brain you have."
+    p {
+      "Actually, you're a lot like Jeopardy game-winner, Monica: Her superpowers are
+    amazing memory, de-activating stress, and the power of sleep. Sound like you? "
+      link_to 'Watch the video with Monica and Kevin', '//www.youtube
+.com/watch?v=hGHnEUDlsvw', target: '_blank', class: 'link-copy'
+      text ' to remind yourself how great a brain you have.'
+    }
   end
 end
