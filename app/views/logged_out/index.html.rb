@@ -126,7 +126,7 @@ painter in New York and animator in Hollywood make him a true hybrid original."
         }
         div {
           a "Monica Thieu", class: 'link-copy__small', "data-reveal-id" => "bioModal-2"
-          p "Jeopardy Winner + Neuroscience Major", class: 'body-caption'
+          p "Jeopardy Winner + Neuroscience Graduate", class: 'body-caption'
         }
         modal('bioModal-2', 'Monica Thieu', 'monica-and-KW.jpg') {
           "Monica is a full-time neuroscience researcher at Stanford. She is the youngest
