@@ -11,7 +11,7 @@ brain to use for your life! Also, "
     }
     p "Here's your profile:"
     case result
-    when :cant_touch
+    when :fearless
       render partial: "shared/profiles/fearless"
     when :badass
       render partial: "shared/profiles/badass"
