@@ -19,7 +19,7 @@ class Views::LoggedOut::Index < Views::Base
         p "What happens when you are introduced to superpowers you never thought you had?"
         p "What happens when you have a user guide for your brain? One that is relevant to your everyday life?"
         p "You change. You adapt. You begin to become who you want to be by knowing how your brain works, how to use it better, and ultimately, know your own mind."
-        p "The truth is the brain you have in not the brain you’re stuck with... really."
+        p "The truth is the brain you have is not the brain you’re stuck with...really."
       }
       column('show-for-small-only small-6 small-centered') {
         image_tag('phone-asset.png', class: 'bottom-spacer')
